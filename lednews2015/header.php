@@ -55,10 +55,14 @@
             </div>    
 			
 			<div class="mobileon">
+			
 	            <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
 					<button class="menu-toggle"><?php _e( 'Primary Menu', 'codium-now' ); ?></button>
+						<span class="searchform mobil-search">
+		                      <span class="search-text"></span>
+		                </span>
 	                <div class="clear"></div>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'primary-mobil', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav>
             </div>
                 

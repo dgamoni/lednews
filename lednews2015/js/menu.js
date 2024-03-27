@@ -102,6 +102,26 @@ jQuery(document).ready(function($){
 		  slidesToShow: 3,
 		  slidesToScroll: 1,
 		  // centerPadding: '60px',
+            responsive: [
+                            {
+                              breakpoint: 1000,
+                              settings: {
+                                slidesToShow: 2,
+                              }
+                            },
+                            {
+                              breakpoint: 650,
+                              settings: {
+                                slidesToShow: 1,
+                              }
+                            },
+                            // {
+                            //   breakpoint: 480,
+                            //   settings: {
+                            //     slidesToShow: 1,
+                            //   }
+                            // }
+                        ]
 		});
 
 		//scroll

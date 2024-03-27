@@ -137,6 +137,9 @@ function deco_get_post_counts( $post_id = 0 ) {
 			'primary'   => __( 'Top primary menu', 'codium-now' ),
 		) );
 		register_nav_menus( array(
+			'primary-mobil'   => __( 'Mobil primary menu', 'codium-now' ),
+		) );
+		register_nav_menus( array(
 			'footr'   => __( 'Footer menu', 'codium-now' ),
 		) );
 	
