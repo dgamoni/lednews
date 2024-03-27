@@ -95,6 +95,15 @@ jQuery(document).ready(function($){
 		  variableWidth: true
 		});
 
+		//slider
+		$('.multiple-items').slick({
+		  infinite: true,
+		  // centerMode: true,
+		  slidesToShow: 3,
+		  slidesToScroll: 1,
+		  // centerPadding: '60px',
+		});
+
 		//scroll
 	$('#scroller').css('right',(($(window).width() - 1100)/2) - 105 + 'px');
     $(window).scroll(function(){
@@ -117,8 +126,107 @@ jQuery(document).ready(function($){
     $(document).on('click', '#scroller', function (e) {
         e.preventDefault();
         $('body, html').animate({scrollTop: 0}, 200);
-    })
+    });
 
 
+    //  ----------------------------------ajax 
+    var click_show_more_post = false;
 
+    /*	AJAX pagination	*/
+    $('.show_more_post').on('click', function () {
+
+        if (click_show_more_post)
+            return false;
+        click_show_more_post = true;
+        var obj = $(this),
+            post_type = obj.data('post-type'),
+            max_pages = obj.data('max-pages'),
+            current_page = obj.data('current-page'),
+            next_page = obj.data('next-page'),
+            taxonomy_name = obj.data('taxonomy-name'),
+            taxonomy_term = obj.data('taxonomy-term'),
+            search_string = obj.data('search-string'),
+			exclude_posts = obj.data('exclude-posts'),
+            action = obj.data('action'),
+            posts_per_page = obj.data('posts-per-page'),
+            inner_class = obj.data('inner-class'),
+            author_id = obj.data('author-id');
+
+        //console.log(action);
+
+        $(inner_class).animate({
+            'opacity': 0.1
+        }, 200);
+        $('.noajax').animate({
+            'opacity': 0.1
+        }, 200);
+
+        $.ajax({
+            url: '/wp-admin/admin-ajax.php',
+            type: "POST",
+            dataType: 'json',
+            data: {
+                'action': action,
+                'post_type': post_type,
+                'author_id': author_id,
+                'posts_per_page': posts_per_page,
+                'max_pages': max_pages,
+                'current_page': current_page,
+                'next_page': next_page,
+                'taxonomy_name': taxonomy_name,
+                'taxonomy_term': taxonomy_term,
+                'search_string': search_string,
+                'exclude_post': exclude_posts
+            },
+            success: function (response) {
+
+            	console.log(response);
+            	
+
+                obj.data('current-page', response.current_page);
+                obj.data('next-page', response.next_page);
+
+
+                if (response.hide_link) {
+                    obj.animate({
+                        'opacity': 0
+                    }, 400, function () {
+                        obj.remove()
+                    });
+                }
+
+                if (response.html) {
+                    $(inner_class).append(response.html);
+                }
+
+                $(inner_class).animate({
+                    'opacity': 1
+                }, 400, function () {
+                    $(this).removeAttr('style');
+                });
+                $('.noajax').animate({
+                    'opacity': 1
+                }, 400, function () {
+                    $(this).removeAttr('style');
+                });
+
+                click_show_more_post = false;
+
+            }
+        });
+
+        return false;
+    });
+//end ajax
+
+		// post 
+		//$('.uptolike-buttons-content').css('display', 'none'); 
+
+
+		// $('.post-share, .uptolike-buttons-content').hover(function () {
+		//     $(".uptolike-buttons-content").css({display: 'inline-block'});
+		// }, function () {
+		//     $(".uptolike-buttons-content").css({display: 'none'});
+		// });
+		
 });    

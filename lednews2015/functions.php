@@ -3,6 +3,48 @@
 
 require_once __DIR__ . '/deco-framework/load.php';
 
+
+function short_title($after = null, $length) {
+	$mytitle = get_the_title();
+	//$mytitle = wp_trim_words( get_the_title(), 6 , ''); 
+	$size = strlen($mytitle);
+	if($size>$length) {
+		$mytitle = mb_substr($mytitle, 0, $length);
+		$mytitle = explode(' ',$mytitle);
+		array_pop($mytitle);
+		// $mytitle = implode(" ",$mytitle).$after;
+		$mytitle = implode(" ",$mytitle);
+		$mytitle = wp_trim_words( $mytitle, 6);
+		$mytitle = $mytitle.$after;
+	} 
+	// else {
+	// 	 $mytitle = wp_trim_words( $mytitle, 6 );
+	// }
+	return $mytitle;
+}
+
+ 	function month_full_name_ru( $m ) {
+
+		$month = array(
+			"1"  => "Января",
+			"2"  => "Февраля",
+			"3"  => "Марта",
+			"4"  => "апреля",
+			"5"  => "Мая",
+			"6"  => "Июня",
+			"7"  => "Июля",
+			"8"  => "Августа",
+			"9"  => "Сентября",
+			"10" => "Октября",
+			"11" => "Ноября",
+			"12" => "Декабря"
+		);
+
+		return strtr( $m, $month );
+	}
+
+ 
+
 function deco_get_post_counts( $post_id = 0 ) {
 	global $wpdb;
 
@@ -28,12 +70,12 @@ function deco_get_post_counts( $post_id = 0 ) {
 
 
 // add tumb for gallery
-add_action( 'init', 'create_post_pub' );
-function create_post_pub()
-{
-    add_theme_support( 'post-thumbnails', array( 'ledgallery', 'publicidade' ) );
-    add_theme_support( 'thumbnail', array( 'ledgallery', 'publicidade' ) );
-}
+// add_action( 'init', 'create_post_pub' );
+// function create_post_pub()
+// {
+//     add_theme_support( 'post-thumbnails', array( 'ledgallery', 'publicidade' ) );
+//     add_theme_support( 'thumbnail', array( 'ledgallery', 'publicidade' ) );
+// }
 
 	/*
 	This file is part of codium_now. Hack and customize by henri labarre and based on the marvelous sandbox theme	codium_now is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
@@ -65,7 +107,7 @@ function create_post_pub()
 		) );
 	
 	    // Post thumbnails support for post
-		add_theme_support( 'post-thumbnails', array( 'post, ledgallery' ) ); // Add it for posts
+		add_theme_support( 'post-thumbnails', array( 'post', 'ledgallery' ) ); // Add it for posts
 		set_post_thumbnail_size( 300, 200, true ); // Normal post thumbnails
 	
 	    // This theme allows users to set a custom background
@@ -108,6 +150,7 @@ function create_post_pub()
 		 wp_enqueue_script( 'slick-min-js', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ), '20140630', true );
 
 		wp_enqueue_script( 'orphus', get_template_directory_uri() .'/js/orphus.js', array(), false, true );
+		
 		
 	}
 	endif; // codium_now_scripts_styles
@@ -183,70 +226,34 @@ function create_post_pub()
 	}
 	endif;
 	
-	if ( ! function_exists( 'codium_now_widgets_init' ) ) :
-	// Widgets plugin: intializes the plugin after the widgets above have passed snuff
-	function codium_now_widgets_init() {
-	
-	  //       register_sidebar(array(
-			// 'name' => __( 'Left Widget for Footer', 'codium-now' ),
-			// 'description' => __( 'Left Footer widget', 'codium-now' ),
-			// 'id'            => 'widgetfooterleft',
-			// 'before_widget'  =>   "\n\t\t\t" . '',
-			// 'after_widget'   =>   "\n\t\t\t<div class=\"clear\"></div><div class=\"center\"></div>\n",
-			// 'before_title'   =>   "\n\t\t\t\t". '<h3 class="widgettitle">',
-			// 'after_title'    =>   "</h3>\n" .''
-			// ));
-	
-	  //       register_sidebar(array(
-			// 'name' => __( 'Center Widget for Footer', 'codium-now' ),
-			// 'description' => __( 'Center Footer widget', 'codium-now' ),
-			// 'id'            => 'widgetfootercenter',
-			// 'before_widget'  =>   "\n\t\t\t" . '',
-			// 'after_widget'   =>   "\n\t\t\t<div class=\"clear\"></div><div class=\"center\"></div>\n",
-			// 'before_title'   =>   "\n\t\t\t\t". '<h3 class="widgettitle">',
-			// 'after_title'    =>   "</h3>\n" .''
-			// ));
-	
-	  //       register_sidebar(array(
-			// 'name' => __( 'Right Widget for Footer', 'codium-now' ),
-			// 'description' => __( 'Right Footer widget', 'codium-now' ),
-			// 'id'            => 'widgetfooterright',
-			// 'before_widget'  =>   "\n\t\t\t" . '',
-			// 'after_widget'   =>   "\n\t\t\t<div class=\"clear\"></div><div class=\"center\"></div>\n",
-			// 'before_title'   =>   "\n\t\t\t\t". '<h3 class="widgettitle">',
-			// 'after_title'    =>   "</h3>\n" .''
-			// ));
-
-            register_sidebar(array(
-				'name' => __( 'Right Sidebar верхний', 'codium-now' ),
-				'description' => __( 'Right Sidebar верхний', 'codium-now' ),
-				'id'            => 'sidebarright',
-				'before_widget'  =>   "\n\t\t\t" . '',
-				'after_widget'   =>   "\n\t\t\t<div class=\"clear\"></div><div class=\"center\"></div>\n",
-				'before_title'   =>   "\n\t\t\t\t". '<h3 class="widgettitlesidebar">',
-				'after_title'    =>   "</h3>\n" .''
-			));
-			 register_sidebar(array(
-				'name' => __( 'Right Sidebar нижний', 'codium-now' ),
-				'description' => __( 'Right Sidebar нижний', 'codium-now' ),
-				'id'            => 'sidebarright-down',
-				'before_widget'  =>   "\n\t\t\t" . '',
-				'after_widget'   =>   "\n\t\t\t<div class=\"clear\"></div><div class=\"center\"></div>\n",
-				'before_title'   =>   "\n\t\t\t\t". '<h3 class="widgettitlesidebar">',
-				'after_title'    =>   "</h3>\n" .''
-			));
-	
-		}
-	endif;
-	
-	add_action( 'widgets_init', 'codium_now_widgets_init' );
-
+// register widget
 	add_action( 'widgets_init', 'deco_sidebar' );
 		function deco_sidebar() {
+			
+			register_sidebar(array(
+				'name' => __( 'Main Right Sidebar верхний'),
+				'description' => __( 'Right Sidebar верхний' ),
+				'id'            => 'sidebarright',
+				'before_widget' => '',
+				'after_widget'  => '',
+				'before_title'  => '',
+				'after_title'   => ''
+			));
+
+			 register_sidebar(array(
+				'name' => __( 'Main Right Sidebar нижний' ),
+				'description' => __( 'Right Sidebar нижний' ),
+				'id'            => 'sidebarright-down',
+				'before_widget' => '',
+				'after_widget'  => '',
+				'before_title'  => '',
+				'after_title'   => ''
+			));
+
 			register_sidebar(
 				array(
 					'id'            => 'banner_sidebar_center',
-					'name'          => __( 'Центральный банер' ),
+					'name'          => __( 'Home Центральный банер' ),
 					'description'   => __( 'Виджет для центрального банера' ),
 					'before_widget' => '',
 					'after_widget'  => '',
@@ -257,8 +264,19 @@ function create_post_pub()
 			register_sidebar(
 				array(
 					'id'            => 'banner_sidebar_up',
-					'name'          => __( 'Верхний банер' ),
+					'name'          => __( 'Header Верхний банер' ),
 					'description'   => __( 'Виджет для верхнего банера' ),
+					'before_widget' => '',
+					'after_widget'  => '',
+					'before_title'  => '',
+					'after_title'   => ''
+				)
+			);
+			register_sidebar(
+				array(
+					'id'            => 'banner_map_single',
+					'name'          => __( 'Single Виджет под постом' ),
+					'description'   => __( 'Виджет под постом' ),
 					'before_widget' => '',
 					'after_widget'  => '',
 					'before_title'  => '',
@@ -267,8 +285,9 @@ function create_post_pub()
 			);
 
 		}
+// end widget 	
 
-	
+
 	if ( ! function_exists( 'codium_now_excerpt_more' ) ) :
 	// Changes default [...] in excerpt to a real link
 	function codium_now_excerpt_more($more) {
@@ -339,4 +358,8 @@ function codium_now_tdd_oembed_filter($html, $url, $attr, $post_ID) {
         return $return;
     }
 }
+
+
+
+
 ?>

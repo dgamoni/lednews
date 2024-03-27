@@ -13,47 +13,51 @@
 	<meta name="viewport" content="width=device-width" />
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100&subset=latin,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
 	<?php wp_head() ?>
 </head>
 <body <?php body_class(); ?> >
+
 	<div id="wrapperimage" class="headerimage">
 	</div>
+
     <div id="wrapperpub" class="header">
 		<div id="header" class="container-head">
 			
 			<div id="mainlogo" class="">
-				<div id="blog-title" class="blogtitle"><a href="<?php echo esc_url(home_url( '/' )); ?>" title="<?php bloginfo('name') ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="lednews.ru"></a></div>
-				<!-- <div class="description"><?php bloginfo('description'); ?> </div> -->
+				<div id="blog-title" class="blogtitle">
+					<a href="<?php echo esc_url(home_url( '/' )); ?>" title="<?php bloginfo('name') ?>">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="lednews.ru">
+					</a>
+				</div>
 			</div>
 
             <div class="mobileoff">
-            <nav id="primary-navigation-mobileoff" class="site-navigation primary-navigation-mobileoff" role="navigation">
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu-mobileoff mleft' ) ); ?>
+	            <nav id="primary-navigation-mobileoff" class="site-navigation primary-navigation-mobileoff" role="navigation">
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu-mobileoff mleft' ) ); ?>
 
-				<ul class="user_link nav-menu-mobileoff mright">
-					<li class="login_zone">										
-							<a href="http://lednews.lighting/">Форум</a>
-					</li>
-					<li>
-	                  <span class="searchform">
-	                      <span class="search-text"></span>
-	                  </span>
-					</li>
-				</ul>
+					<ul class="user_link nav-menu-mobileoff mright">
+						<li class="login_zone">										
+								<a href="http://lednews.lighting/">Форум</a>
+						</li>
+						<li>
+		                  <span class="searchform">
+		                      <span class="search-text"></span>
+		                  </span>
+						</li>
+					</ul>
 
-			</nav>
+				</nav>
             </div>    
 			
 			<div class="mobileon">
-            <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
-				<button class="menu-toggle"><?php _e( 'Primary Menu', 'codium-now' ); ?></button>
-                <div class="clear"></div>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-
-		
-
-			</nav>
-            </div>    
+	            <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+					<button class="menu-toggle"><?php _e( 'Primary Menu', 'codium-now' ); ?></button>
+	                <div class="clear"></div>
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+				</nav>
+            </div>
+                
 		</div>
 		<!--  #header -->	
 	</div>
@@ -66,7 +70,8 @@
 	dynamic_sidebar( 'banner_sidebar_up' );
     ?>
 
+    <div class="clear"></div>
 
 	<!--  #wrapperpub -->	
 	<div id="wrapper" class="container">
-		<div class="clear"></div>
+		

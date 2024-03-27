@@ -25,7 +25,7 @@ $slider_post = new WP_Query( $slider_args );
 if ( $slider_post->have_posts() ): {
 	?>
 	
-	<div id="wrapper" class="container">
+	<div id="wrapper2" class="container">
 		<h6 class="main-title">Новое в галерее</h6>
 	</div>
 

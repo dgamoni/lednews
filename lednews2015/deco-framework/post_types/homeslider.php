@@ -80,12 +80,13 @@
 	add_action( 'manage_posts_custom_column', 'manage_ledgallery_columns', 10, 2 );
 
 
-// place
-	function register_place_post_type() {
+// slider
+
+function register_ledslider_post_type() {
 
 		$labels = array(
-			'name'               => _x( 'Place', 'place' ),
-			'singular_name'      => _x( 'Place', 'place' ),
+			'name'               => _x( 'Слайдер', 'ledslider' ),
+			'singular_name'      => _x( 'Слайдер', 'ledslider' ),
 			'add_new'            => 'Добавить',
 			'add_new_item'       => __( 'Добавить' ),
 			'edit_item'          => __( 'Редактировать' ),
@@ -100,7 +101,7 @@
 
 
 
-		register_post_type( 'place', array(
+		register_post_type( 'ledslider', array(
 			'labels'          => $labels,
 			'public'          => true,
 			'show_ui'         => true,
@@ -109,13 +110,13 @@
 						'has_archive'     => true,
 			'hierarchical'    => false,
 			//'supports'        => array( 'title', 'thumbnail','page-attributes' ),
-			'supports' => array( 'title','editor', 'thumbnail' ,'page-attributes','custom-fields'),
+			'supports' => array( 'title' ,'page-attributes'),
 			'menu_position' => 8,
 		) );
 	}
 
 
-	function manage_place_columns( $column_name, $id ) {
+	function manage_ledslider_columns( $column_name, $id ) {
 
 		global $wpdb, $pageURLs;
 
@@ -127,7 +128,7 @@
 				echo $id;
 				break;
 
-			case 'place_thumb':
+			case 'ledslider_thumb':
 				if ( has_post_thumbnail( $id ) ):
 					echo '<a href="' . admin_url( 'post.php?post=' . $id . '&action=edit' ) . '">';
 					echo '<div class="rc-admin-thumb">';
@@ -142,18 +143,18 @@
 		} // end switch
 	}
 
-	function add_place_columns( $columns ) {
+	function add_ledslider_columns( $columns ) {
 
 		global $pageURLs;
 		$new_columns['cb']               = '<input type="checkbox" />';
 		$new_columns['title']            = _x( 'Заголовок', 'column name' );
 		$new_columns['date']             = _x( 'Дата', 'column name' );
-		$new_columns['place_thumb'] = _x( 'Миниатюра', 'column name' );
+		$new_columns['ledslider_thumb'] = _x( 'Миниатюра', 'column name' );
 
 		return $new_columns;
 	}
 
 
-	add_action( 'init', 'register_place_post_type' );
-	add_filter( 'manage_edit-place_columns', 'add_place_columns' );
-	add_action( 'manage_posts_custom_column', 'manage_place_columns', 10, 2 );
+	add_action( 'init', 'register_ledslider_post_type' );
+	add_filter( 'manage_edit-ledslider_columns', 'add_ledslider_columns' );
+	add_action( 'manage_posts_custom_column', 'manage_ledslider_columns', 10, 2 );

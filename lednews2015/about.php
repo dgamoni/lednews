@@ -12,7 +12,7 @@ get_header();
 
 	<div id="content" class="ten columns">
 		
-		<?php the_title( '<h1 class="entry-title center">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<div class="dp100">
@@ -22,6 +22,18 @@ get_header();
 					<div class="dp100 ">
 
 						<?php the_content(); ?>
+
+						<!-- about block -->
+						<div class="one-third column posthome">
+							<h3>Руководитель проекта</h3>
+							<?php 
+							$led_about_foto1 = get_field('led_about_foto1');
+							$led_about_text1 = get_field('led_about_text1');
+							$params = array( 'height' => 300 ); 
+							?>
+							<img src="<?php echo $led_about_foto1['url']; ?>"/>
+						</div>
+						<!-- end about -->
 												
 						<div class="clear"></div>
 
