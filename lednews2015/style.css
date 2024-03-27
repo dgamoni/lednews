@@ -25,11 +25,12 @@ blockquote{border-left:0.4em solid #eee; margin:0 0 1em 1.5em; padding:0 0 0 1em
 
 /* Links */
 a img, :link img, :visited img{border:0; outline:none; text-decoration:none}
-a{color:#444; text-decoration:none; outline:none;cursor: pointer;}
+a{color:#444; text-decoration:none; outline:none;cursor: pointer;transition: all .1s;}
 a:hover{
 	/* color:#0299FF;*/
 	color: #263ce3;
 	 text-decoration:none; outline:0
+
 	}
 
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=latin,cyrillic-ext,cyrillic);
@@ -235,11 +236,73 @@ a [class*=" icon-"] {
 .google:before,
 .vk:before,
 .slick-prev:before, .slick-next:before,
-.footer #scroller span
+.footer #scroller span,
+.post-views:before,
+.post-comments:before,
+.post-share:before,
+.header-search-icon:before
 	 {
 	  background: url(images/sprite.png) 0 0 no-repeat;
 	  background-size: 2000px;
 	}
+.header-search-icon {
+    line-height: 34px;
+}
+.header-search-icon:before {
+    background-position: -736px -174px;
+  width: 40px;
+  height: 40px;
+  content: ''; 
+  display: inline-block;
+  vertical-align: bottom;
+}
+/*content*/
+.post-views:before {
+  background-position: -405px -89px;
+  width: 18px;
+  height: 18px;
+  content: ''; 
+  display: inline-block;
+  vertical-align: bottom;
+}
+.post-comments:before {
+  background-position: -433px -89px;
+  width: 21px;
+  height: 18px;
+  content: '';
+  display: inline-block;
+  vertical-align: bottom; 
+}
+.post-share:before {
+  background-position: -459px -89px;
+  width: 21px;
+  height: 18px;
+  content: '';
+  display: inline-block;
+  vertical-align: bottom; 
+}
+.post-views, .post-comments, .post-share , .header-search-icon{
+  display: inline-block;
+  width: 45px;
+  height: 24px;
+  position: relative;
+  font-size: 14px;
+}
+.post-share {
+  width: 105px;
+}
+.post-meta {
+    color: #1a1a1a;
+}
+
+/*search*/
+.header-search-results .one-third{
+  float: left;
+  display: inline;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 290px;
+}
 
 /* Heading */
 h1, h2, h3, h4{
@@ -892,7 +955,7 @@ margin:0 0 0.5em 2em; padding:0em 1em 1em 0em;
 .entry-cat {
   font-size: 11px;
   line-height: 1.5em;
-  background-color: rgba(255, 255, 255, 0.5);
+  /*background-color: rgba(255, 255, 255, 0.5);*/
   margin: 10px 0px 3px 0px;
   text-transform: uppercase;
   font-weight: bold;
@@ -911,7 +974,9 @@ margin:0 0 0.5em 2em; padding:0em 1em 1em 0em;
 	color:#999999;
  font-size: 12px;
  line-height:1.5em;
- background-color:#FFF;background-color: rgba(255, 255, 255, 0.5);margin:3px 0px 3px 0px;
+/* background-color:#FFF;
+ background-color: rgba(255, 255, 255, 0.5);*/
+ margin:3px 0px 3px 0px;
 	/*padding: 6px 6px;*/
 	-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
 .entry-meta .tag-links a{color:#444; background:#f3f3f3}
@@ -1511,7 +1576,8 @@ a.expand:hover {
 .dp80{width:80%;}
 .dp100{width:100%;}
 .clear{clear:both;}
-p { padding:0em 1em 1em 0em;
+p { /*padding:0em 1em 1em 0em;*/
+  padding: 5px 0 5px 0;
   color:#666666;
 }
 .dp20 li{margin:0 0 0 1em;}

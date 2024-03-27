@@ -5,7 +5,7 @@ $requires[] = 'deco-widgets/init.php';
 $requires[] = 'deco-acf/init.php';
 // $requires[] = 'deco-sphinx-search/init.php';
 
-//$requires[] = 'deco-cool-search/init.php';
+$requires[] = 'deco-cool-search_/init.php';
 
 //$requires[] = 'cool-search/init.php';
 // $requires[] = 'deco-login/init.php';

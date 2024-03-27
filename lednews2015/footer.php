@@ -41,7 +41,7 @@
             </div>
             
             <div class="clear"></div>
-
+           
             <?php wp_footer() ?>
 
         </div> <!-- end wrapperfooter  -->

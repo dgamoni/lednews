@@ -3,7 +3,29 @@
 
 require_once __DIR__ . '/deco-framework/load.php';
 
-//add media category
+function deco_get_post_counts( $post_id = 0 ) {
+	global $wpdb;
+
+	if ( empty( $post_id ) ) {
+		global $post;
+		$post_id = $post->ID;
+	}
+
+	$current_blog_id = get_current_blog_id();
+	$stats           = $wpdb->get_row( "SELECT * FROM $wpdb->de_statistics WHERE post_id = $post_id and blog_id = $current_blog_id" );
+	$result          = array(
+		'views' => $stats->views_counts,
+		'likes' => $stats->votes_sum,
+		'fb'    => $stats->fb_counts,
+		'vk'    => $stats->vk_counts,
+		'tw'    => $stats->tw_counts,
+		'ln'    => $stats->ln_counts,
+	);
+
+	return $result;
+}
+
+
 
 // add tumb for gallery
 add_action( 'init', 'create_post_pub' );

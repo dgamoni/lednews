@@ -44,18 +44,27 @@
 				    <p><?php echo codium_now_cleanCut(get_the_excerpt(), 180); ?></p>
 					
 				<div class="post-meta">
-					<?php if ( $decollete_post_views = get_post_meta( $post_id, "decollete_post_views", true ) ) { ?>
+					<?php global $post;
+					if (
+					 //$decollete_post_views = get_post_meta( $post->ID, "decollete_post_views", true ) 
+						$decollete_post_views = get_field( "decollete_post_views", get_the_ID() ) 
+					) { ?>
+					<?php } else $decollete_post_views = 0; ?>
 
 						<span class="post-views">
 							<?php echo $decollete_post_views; ?>
 						</span>
 
-					<?php } ?>
+					
 
 						<span class="post-comments"><?php $comments = get_comment_count( get_the_ID() );
 							echo $comments['approved']; ?>
 						</span>
+
+						<span class="post-share">Поделиться</span>
+
 				</div>
+
 
                 </div> <!-- end entry-content   -->
 

@@ -5,47 +5,54 @@ if ( ! function_exists( 'dc_ajax_search' ) ) {
 		if ( isset( $_POST['term'] ) ) {
 
 
-//			post,page,peoples,projects,deputats,reforms,commissionstable
-//,commissiontemp,appeals,requests,draftdecisions,votings,answers,fraction,candidat
-//
 			$search_query = new WP_Query( array(
 				's'              => $_POST['term'],
 				'post_type'      => 'post',
-				'posts_per_page' => 24,
+				'posts_per_page' => 8,
 				//'no_found_rows' => true,
 				'post_status'    => 'publish',
 				'orderby'        => 'date',
 				'order'          => 'DESC'
 			) );
-
+			//var_dump($search_query);
+			global $post;
+			
 			if ( $search_query->have_posts() ) {
+
 				?>
 				<?php
 				while ( $search_query->have_posts() ) {
 					$search_query->the_post();
 					$post_id = $search_query->post->ID;
-					$image   = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'deco_thumb_280_200' );
-					if ( $image[0] ) {
-						$img = $image[0];
-					}
-					list( $time, $date ) = explode( ' ', get_the_time( 'H:m d.n.Y' ) );
-					list( $d, $m, $y ) = explode( '.', $date );
-					$coment_count = get_comment_count( $post_id );
-					$coment_count = $coment_count['approved'];
-					$link         = get_the_permalink();
-					$now_year     = date( 'Y' );
-					$counts       = deco_get_post_counts( $post_id );
+					//echo $post_id;
+
+					setup_postdata( $post );
+					
+						get_template_part('content');
+					
+
+					// $image   = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'deco_thumb_280_200' );
+					// if ( $image[0] ) {
+					// 	$img = $image[0];
+					// }
+					// list( $time, $date ) = explode( ' ', get_the_time( 'H:m d.n.Y' ) );
+					// list( $d, $m, $y ) = explode( '.', $date );
+					// $coment_count = get_comment_count( $post_id );
+					// $coment_count = $coment_count['approved'];
+					// $link         = get_the_permalink();
+					// $now_year     = date( 'Y' );
+					// $counts       = deco_get_post_counts( $post_id );
 					?>
-					<div class="search-tile">
+<!-- 					<div class="search-tile">
 						<div class="st-img" style="background-image: url(
                         <?php if($img){ echo $img;} else {  echo DECO_THEME_URL; ?>/assets/img/placeholder.jpg<?php } ?>)"></div>
                         <div class="st-title">
-                            <time ><?php echo $d . ' ' . deco_month_num_to_name( $m ); ?><?php echo ( $y != $now_year ) ? $y : ''; ?></time>
+                            <time ><?php echo $d . ' ' .  $m  ?><?php echo ( $y != $now_year ) ? $y : ''; ?></time>
 
                             <p><?php the_title(); ?></p>
                         </div>
                         <a class="st-link" href="<?php echo $link; ?>"></a>
-					</div>
+					</div> -->
 
 					<?php
 				}
@@ -76,7 +83,8 @@ if ( ! function_exists( 'dc_ajax_search_2' ) ) {
 
 			foreach ( $posts as $post ) {
 				setup_postdata( $post );
-				get_template_part( 'content' );
+					get_template_part( 'content' );
+				wp_reset_postdata();
 			}
 		} else {
 			header( 'Status: 204 No content' );

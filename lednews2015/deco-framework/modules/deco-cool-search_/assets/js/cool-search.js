@@ -2,7 +2,6 @@ jQuery(document).ready(function ($) {
 	/****************
 	 **    SEARCH
 	 *****************/
-
 		// Button
 	jQuery('.search-text').click(function (e) {
 		e.preventDefault();
@@ -27,35 +26,28 @@ jQuery(document).ready(function ($) {
 		}
 	}, 400);
 // AJAX
+	// var url;
+	// url = "/wp-admin/admin-ajax.php";
+	
 	var dc_search = function (term) {
 		if (term != "") {
-			//jQuery('.header-search-results').css({'opacity': 0.2, 'overflow': 'hidden'});
 			jQuery('.header-search-results').fadeOut(400);
 			loading_bar(true);
 			jQuery.ajax({
 				type   : "post",
-				url    : location.origin + "/wp-admin/admin-ajax.php",
+				url    : location.origin + '/wp-admin/admin-ajax.php',
 				data   : {action: 'dc_ajax_search', term: term},
 				success: function (data, textStatus, xhr) {
-
+					console.log(data);
 					if (xhr.status == 204 || typeof data === 'undefined') {
 						loading_bar(false);
-						jQuery('.header-search-results').html('<h3>Нет результата поиска</h3>');
+						jQuery('.header-search-results').html('<h3>Ничего не найдено</h3>');
 						jQuery('.header-search-all').addClass('hide');
 					} else {
 						jQuery('.header-search-container').scrollTop();
 						// append results to ul element
 						jQuery('.header-search-results').html(data);
 						loading_bar(false);
-
-
-						// fade in results
-						/*                        jQuery('.header-search-results .blu-post-hidden').each(function (i) {
-						 jQuery(this).delay(40 * i).fadeIn(function () {
-						 jQuery(this).removeClass('blu-post-hidden');
-						 });
-						 });*/
-
 						jQuery('.header-search-all').attr('href', location.origin + '/?s=' + term).removeClass('hide');
 					}
 				},
@@ -66,8 +58,6 @@ jQuery(document).ready(function ($) {
 			});
 		}
 	}
-
-
 // Loading Bar
 	function loading_bar(start) {
 		if (start) {
@@ -75,23 +65,11 @@ jQuery(document).ready(function ($) {
 				jQuery(".header-search-container").append(jQuery("<div>&nbsp;</div>").attr("id", "preloader"));
 				jQuery("#preloader").width((50 + Math.random() * 30) + "%");
 			}
-
-			/*
-			 if (jQuery("#loadingbar").length === 0) {
-			 jQuery("body").append(jQuery("<div></div>").attr("id", "loadingbar"));
-			 jQuery("#loadingbar").width((50 + Math.random() * 30) + "%");
-			 }*/
-
 		} else {
 			jQuery("#preloader").width("101%").delay(200).fadeOut(300, function () {
 				jQuery(this).remove();
-				//jQuery('.header-search-results').stop().animate({'opacity': 1}, 300);
 				jQuery('.header-search-results').fadeIn(400);
 			});
-
-			/*jQuery("#loadingbar").width("101%").delay(200).fadeOut(300, function () {
-			 jQuery(this).remove();
-			 });*/
 		}
 	}
 });
