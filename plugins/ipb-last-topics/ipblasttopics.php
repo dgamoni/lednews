@@ -10,7 +10,7 @@ License: iwordpress.ir
 */
 define( 'MYPLUGINNAME_PATH', plugin_dir_path(__FILE__) );
 
-load_plugin_textdomain('ipb','wp-content/plugins/ipb-last-topics/langs');
+load_plugin_textdomain('ipb', false, 'wp-content/plugins/ipb-last-topics/langs');
 //require ipb_config.php
 if(file_exists(MYPLUGINNAME_PATH .'/ipb_config.php')){
 	require(MYPLUGINNAME_PATH .'/ipb_config.php');
@@ -267,6 +267,59 @@ function lasttopics_statistic($atts)
 add_shortcode('lasttopics_statistic','lasttopics_statistic');
 
 
+// return current post link and count comments
+function lasttopics_single($atts)
+{
+	//global variable
+	global $mysql_connect,$wpdb,$ipb_mysqlquery,$row,$plugin_name,$ipburl,$dbhost,$dbname,$dbuser,$dbpass,$dbprifix,$limit;
+	
+	//cout
+	 extract( shortcode_atts( array(
+	 	  'id'	=> '0',
+		  'link' => '0',
+		  'count_comments' => '0'
+	 ), $atts ) );
+
+	 $this_id = $atts['id'];
+
+	 if ($this_id == 0) {
+	 	return '';
+	 }
+
+	//database connect and query
+	$mysql_connect = mysql_connect($dbhost,$dbuser,$dbpass) or die("" . __('Error communicating with the database', 'ipb') . "");
+	mysql_select_db($dbname) or die("" . __('Error communicating with the database', 'ipb') . "");
+	mysql_query("SET NAMES 'latin1_swedish_ci'", $mysql_connect); 
+	mysql_query("SET character_set_connection = 'latin1_swedish_ci'", $mysql_connect);
+
+//html 
+	$currentlang = get_bloginfo('language');
+
+
+	
+	$ipb_mysqlquery_count = mysql_query(
+		"SELECT tid,title,posts
+		FROM topics
+		WHERE tid=$this_id" 
+		);
+
+	//var_dump(mysql_fetch_assoc($ipb_mysqlquery_count));
+	while($row = mysql_fetch_assoc($ipb_mysqlquery_count)) {
+		$count = $row['posts'];
+		$link = $ipburl."/index.php?showtopic=".$row['tid'];
+	}
+
+	if ( $atts['link'] == 1 ) {
+		return $link;
+	} else 	
+	if ( $atts['count_comments'] == 1 ) {
+		return $count;
+	} else
+		return '0';
+	}
+
+
+add_shortcode('lasttopics_single','lasttopics_single');
 
 //last post
 function lasttopics()
