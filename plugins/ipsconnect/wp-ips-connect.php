@@ -3,11 +3,11 @@
 /*
   Plugin Name: (Pro) WordPress IPSConnect
   Description: IPS Connect WordPress SSO
-  Version: 1.1.2
+  Version: 1.1.3
   Author: Provisionists
   Author URI: http://www.provisionists.com/
- * @package (MT) WordPress IPSConnect
- * @version 1.1.2
+ * @package (Pro) WordPress IPSConnect
+ * @version 1.1.3
  * @author Provisionists
  * @link http://www.provisionists.com
  * @copyright Copyright (c) 2013, Provisionists LLC All Rights Reserved

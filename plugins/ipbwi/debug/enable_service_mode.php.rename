@@ -1,0 +1,5 @@
+<?php
+
+define('IPBWI_SERVICE_MODE',true);
+
+?>

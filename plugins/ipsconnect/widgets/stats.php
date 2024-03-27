@@ -3,7 +3,7 @@
 /*
  * @package (Pro) WordPress IPSConnect
  * @brief Ips_Connect_Stats_Widget widget
- * @version 1.1.2
+ * @version 1.1.3
  * @author Provisionists (based on Marcher Technologies WP IPS Connect)
  * @link https://provisionists.com
  * @copyright Copyright (c) 2014, Provisionists LLC All Rights Reserved

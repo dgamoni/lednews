@@ -1,0 +1,534 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: decomments\n"
+"POT-Creation-Date: 2013-10-29 11:19+0300\n"
+"PO-Revision-Date: 2013-12-09 18:48+0200\n"
+"Last-Translator: Alexey <alexey@creative.kiev.ua>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: components/settings/component-settings.php:23
+#: components/settings/views/templates/settings-page.tpl.php:2
+msgid "Settings"
+msgstr "Налаштування"
+
+#: components/settings/views/view-settings-page.php:12
+msgid "Settings were saved successfully"
+msgstr "Настройки успешно сохранены"
+
+#: components/settings/views/view-settings-page.php:24
+msgid "The size of the avatar (Height)"
+msgstr "Размер аватара (Высота)"
+
+#: components/settings/views/view-settings-page.php:25
+msgid "The size of the avatar (Width)"
+msgstr "Размер аватара (Ширина)"
+
+#: components/settings/views/view-settings-page.php:26
+msgid "Time to edit / delete comments"
+msgstr "Время редактирования/удаления комментария"
+
+#: components/settings/views/view-settings-page.php:27
+msgid "Number of comments per page"
+msgstr "Количество комментариев на каждой странице"
+
+#: components/settings/views/view-settings-page.php:28
+msgid "Add dofollow or nofollow to commentators links?"
+msgstr "Добавлять dofollow или nofollow к ссылкам комментаторов?"
+
+#: components/settings/views/view-settings-page.php:29
+msgid "Show subscribe to new comments of the post"
+msgstr "Отобразить подписку на новые комментарии к посту"
+
+#: components/settings/views/view-settings-page.php:30
+msgid "Allow subscribe to new comments of the post by default"
+msgstr "Разрешить подписку на новые комментарии к посту по-умолчанию"
+
+#: components/settings/views/view-settings-page.php:31
+msgid "Display the subscription for new answers to the commentary"
+msgstr "Отобразить подписку на новые ответы к комментарию"
+
+#: components/settings/views/view-settings-page.php:32
+msgid "Allow subscription to new replies to the comment by default"
+msgstr "Разрешить подписку на новые ответы к комментарию по-умолчанию"
+
+#: components/settings/views/view-settings-page.php:33
+msgid "Allocate comments of post author"
+msgstr "Выделять комментарии автора поста?"
+
+#: components/settings/views/view-settings-page.php:34
+msgid "Background author's comment"
+msgstr "Фон комментария автора"
+
+#: components/settings/views/view-settings-page.php:35
+msgid "Output numbers of comments"
+msgstr "Выводить порядковые номера комментариев"
+
+#: components/settings/views/view-settings-page.php:36
+msgid "Allow to quote comments"
+msgstr "Разрешить цитировать комментарии"
+
+#: components/settings/views/view-settings-page.php:37
+msgid "Output the total number of comments at the top"
+msgstr "Выводить общее кол-во комментариев вверху"
+
+#: components/settings/views/view-settings-page.php:38
+msgid "Enable client validation fields"
+msgstr "Включить клиентскую валидацию полей"
+
+#: components/settings/views/view-settings-page.php:39
+msgid "Sort comments"
+msgstr "Сортировка комментариев"
+
+# Затемнять комментарии с отрицательным рейтенгом
+#: components/settings/views/view-settings-page.php:41
+msgid "Show low opacity comments with negative ratings"
+msgstr "Показывать комментарии с отрицательным рейтингом с малым opacity"
+
+#: components/settings/views/view-settings-page.php:42
+msgid "Show two the highest ranking comments the at the top of the list"
+msgstr "Показывать два комментария с наивысшим рейтингом вверху списка"
+
+#: components/settings/views/view-settings-page.php:43
+msgid "The minimum number of likes to display a comment at the top of the list"
+msgstr ""
+"Минимальное количество лайков для отображения комментария вверху списка"
+
+#: components/settings/views/view-settings-page.php:44
+msgid "The maximum size of uploaded images"
+msgstr "Максимальный размер загружаемой картинки"
+
+#: components/settings/views/view-settings-page.php:45
+msgid "Display avatars authors from the right side"
+msgstr "Отображения аватаров авторов комментариев справа"
+
+#: components/settings/views/view-settings-page.php:46
+msgid "Display an adding comments form at the top"
+msgstr "Отображать форму добавления комментариев вверху"
+
+#: components/settings/views/view-settings-page.php:47
+msgid "Allow endless feed"
+msgstr "Разрешить бесконечную ленту"
+
+#: components/settings/views/view-settings-page.php:48
+msgid "Allow dislikes"
+msgstr "Разрешить дизлайк"
+
+#: components/settings/views/templates/settings-page.tpl.php:11
+msgid "Comments"
+msgstr "Коментарі"
+
+msgid "Comment"
+msgstr "коментаря"
+
+#: components/settings/views/templates/settings-page.tpl.php:19
+#: components/comments/views/view-comments.php:168
+msgid "minutes"
+msgstr "хв"
+
+#: components/settings/views/templates/settings-page.tpl.php:62
+msgid "Vote"
+msgstr "Голосование"
+
+#: components/settings/views/templates/settings-page.tpl.php:85
+msgid "Picture"
+msgstr "Аватар"
+
+#: components/settings/views/templates/settings-page.tpl.php:92
+msgid "Avatar by default"
+msgstr "Аватар по-умолчанию"
+
+#: components/settings/views/templates/settings-page.tpl.php:99
+#: components/comments/component-comments.php:88
+#: components/comments/controllers/controller-comments.php:75
+msgid "The attached file validation is invalid!"
+msgstr "Файл не прошел валидацию"
+
+#: components/settings/views/templates/settings-page.tpl.php:113
+msgid "Subscription"
+msgstr "Подписка"
+
+#: components/settings/views/templates/settings-page.tpl.php:136
+msgid "Files loading"
+msgstr "Загрузка файлов"
+
+#: components/settings/views/templates/settings-page.tpl.php:150
+#: components/notification-messages/views/templates/page-notification-messages.tpl.php:75
+#: components/badges/views/templates/badge-edit.tpl.php:35
+msgid "Save"
+msgstr "Сохранить"
+
+#: components/notification-messages/component-notification-messages.php:7
+#: components/notification-messages/component-notification-messages.php:57
+#: components/notification-messages/views/templates/page-notification-messages.tpl.php:5
+msgid "Notifications"
+msgstr "Уведомления"
+
+#: components/notification-messages/component-notification-messages.php:8
+msgid "The texts of emails"
+msgstr "Тексты писем"
+
+#: components/notification-messages/views/templates/page-notification-messages.tpl.php:25
+msgid "View supported shortcodes"
+msgstr "Просмотреть поддерживаемые шорткоды"
+
+#: components/notification-messages/views/templates/page-notification-messages.tpl.php:28
+msgid "Supported shortcodes"
+msgstr "Поддерживаемые шорткоды"
+
+#: components/notification-messages/views/templates/page-notification-messages.tpl.php:31
+msgid "Comment's author"
+msgstr "Автор комментария"
+
+#: components/notification-messages/views/templates/page-notification-messages.tpl.php:35
+msgid "Comment creation date"
+msgstr "Дата создания комментария"
+
+#: components/notification-messages/views/templates/page-notification-messages.tpl.php:39
+msgid "Comment text"
+msgstr "Текст комментария"
+
+#: components/notification-messages/views/templates/page-notification-messages.tpl.php:43
+msgid "Comment link"
+msgstr "Ссылка на комментарий"
+
+#: components/notification-messages/views/templates/page-notification-messages.tpl.php:47
+msgid "Post title, to which a comment has been added"
+msgstr "Заголовок поста, к которому был добавлен комментарий"
+
+#: components/notification-messages/views/templates/page-notification-messages.tpl.php:51
+msgid "Post link"
+msgstr "Посилання на допис"
+
+#: components/notification-messages/controllers/controller-notification-messages.php:20
+msgid "The changes are not saved! Some fields are not completed."
+msgstr "Зміни не збережено. Не всі поля заповнені."
+
+#: components/notification-messages/controllers/controller-notification-messages.php:29
+msgid "Changes saved successfully."
+msgstr "Зміни збережено."
+
+#: components/notification-messages/controllers/controller-notification-messages.php:33
+msgid "Error saving!"
+msgstr "Помилка при збереженні"
+
+#: components/debug/views/view-sandbox.php:8
+msgid "No data to display"
+msgstr "Немає даних для відображення"
+
+#: components/comments/component-comments.php:131
+#: components/comments/classes/comments-walker.php:127
+msgid "Your comment is awaiting moderation."
+msgstr "Ваш коментар очікує на модерацію"
+
+#: components/comments/views/view-comments.php:161
+msgid "Author"
+msgstr "Автор"
+
+#: components/comments/views/view-comments.php:168
+msgid "Remained"
+msgstr "Залишилось"
+
+#: components/comments/views/view-comments.php:169
+#: components/badges/views/templates/badges-page.tpl.php:28
+msgid "Remove"
+msgstr "Видалити"
+
+#: components/comments/views/view-comments.php:185
+msgid "Edited by:"
+msgstr "Відредаговано:"
+
+#: components/comments/views/view-comments.php:191
+msgid "Comment deleted"
+msgstr "Коментар видалено"
+
+#: components/comments/views/view-comments.php:202
+msgid "Reply"
+msgstr "Відповісти"
+
+#: components/comments/views/view-comments.php:203
+msgid "Share"
+msgstr "Шейр"
+
+#: components/comments/views/templates/comment-form.tpl.php:22
+msgid "To add a new picture, remove the old"
+msgstr "Для додавання нової картинки видаліть стару"
+
+#: components/comments/views/templates/comment-form.tpl.php:24
+#: components/comments/views/templates/comment-form.tpl.php:38
+#: components/comments/views/templates/renderComments.php:217
+msgid "Fire"
+msgstr "Публікувати"
+
+#: components/comments/views/templates/comment-form.tpl.php:25
+#: components/comments/views/templates/comment-form.tpl.php:39
+#: components/comments/views/templates/renderComments.php:218
+msgid "Cancel"
+msgstr "Відміна"
+
+#: components/comments/views/templates/comment-form.tpl.php:29
+msgid "Add a picture"
+msgstr "Додати зображення"
+
+#: components/comments/views/templates/comment-form.tpl.php:54
+msgid "Attention"
+msgstr "Увага"
+
+#: components/comments/views/templates/comment-form.tpl.php:59
+msgid "E-mail is already registered on the site. Please use the login form"
+msgstr "E-mail вже зареєстровано на сайті. Будь ласка авторизуйтесь"
+
+#: components/comments/views/templates/comment-form.tpl.php:61
+msgid "You entered an incorrect username or password"
+msgstr "Ви ввели логін чи пароль з помилкою"
+
+#: components/comments/views/templates/comment-form.tpl.php:84
+msgid "Log in"
+msgstr "Увійти"
+
+#: components/comments/views/templates/comment-form.tpl.php:93
+msgid "Remember me"
+msgstr "Пам'ятати мене"
+
+#: components/comments/views/templates/renderComments.php:170
+msgid "comment"
+msgstr "комент"
+
+#: components/comments/views/templates/renderComments.php:172
+msgid "comment. What is missing is yours!"
+msgstr "коментар. Дуже не вистачає вашого!"
+
+#: components/comments/views/templates/renderComments.php:181
+msgid "You are logged in as"
+msgstr "Ви авторизовані як"
+
+#: components/comments/views/templates/renderComments.php:181
+msgid "Log out"
+msgstr "Вийти"
+
+#: components/comments/views/templates/renderComments.php:191
+msgid "Name"
+msgstr "Ім'я"
+
+#: components/comments/views/templates/renderComments.php:195
+msgid "E-mail"
+msgstr "Пошта"
+
+#: components/comments/views/templates/renderComments.php:198
+msgid "Authorization"
+msgstr "Авторизація"
+
+#: components/comments/views/templates/renderComments.php:222
+msgid "Add a quote"
+msgstr "Додати цитату"
+
+#: components/comments/views/templates/renderComments.php:231
+msgid "Subscribe to the answers to my beautiful comment"
+msgstr "Підписатися на відповіді до мого коментаря"
+
+#: components/comments/views/templates/renderComments.php:236
+msgid "Subscribe to all comments"
+msgstr "Підписатися на всі коментарі"
+
+#: components/comments/views/templates/renderComments.php:245
+#: components/comments/views/templates/renderComments.php:333
+msgid "Ability to comment is prohibited."
+msgstr "Обговорення закрито."
+
+#: components/comments/views/templates/renderComments.php:256
+msgid "Sorting"
+msgstr "Сортування"
+
+#: components/comments/views/templates/renderComments.php:258
+msgid "The best"
+msgstr "Кращі"
+
+#: components/comments/views/templates/renderComments.php:259
+msgid "The newest"
+msgstr "Найновіші"
+
+#: components/comments/views/templates/renderComments.php:260
+msgid "The earliest"
+msgstr "Найстаріші"
+
+#: components/comments/views/templates/renderComments.php:317
+msgid "Loading comments, please wait"
+msgstr "Завантаження коментарів, зачекайте"
+
+#: components/comments/views/templates/renderComments.php:319
+msgid "Load more"
+msgstr "Завантажити ще"
+
+#: components/comments/views/templates/renderComments.php:323
+msgid "Previous comments"
+msgstr "Попередні коментарі"
+
+#: components/comments/views/templates/renderComments.php:324
+msgid "Following comments"
+msgstr "Наступні коментарі"
+
+#: components/comments/classes/comments-walker.php:124
+#, php-format
+msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">написал:</span>"
+msgstr "<cite class=\"fn\">%s</cite> <span class=\"says\">написав:</span>"
+
+#: components/comments/classes/comments-walker.php:134
+#, php-format
+msgid "%1$s в %2$s"
+msgstr "%1$s о %2$s"
+
+#: components/comments/classes/comments-walker.php:134
+msgid "(Edit)"
+msgstr "(Редагувати)"
+
+#: components/comments/classes/files-upload.php:314
+#, php-format
+msgid "The uploaded file could not be moved to %s."
+msgstr ""
+
+#: components/comments/classes/files-upload.php:319
+#, php-format
+msgid "The uploaded file %s could not be upload."
+msgstr ""
+
+#: components/badges/component-badges.php:30
+#: components/badges/views/templates/badges-page.tpl.php:31
+msgid "Badges"
+msgstr "Бейджи"
+
+#: components/badges/component-badges.php:38
+#: components/badges/views/templates/badge-add.tpl.php:2
+msgid "Add badge"
+msgstr "Додати бейдж"
+
+#: components/badges/component-badges.php:45
+#: components/badges/views/templates/badge-edit.tpl.php:2
+msgid "Edit badge"
+msgstr "Редагувати бейдж"
+
+#: components/badges/component-badges.php:71
+#: components/badges/views/templates/badge-add.tpl.php:6
+#: components/badges/views/templates/badge-edit.tpl.php:6
+msgid "Number of likes"
+msgstr "Кількість лайків"
+
+#: components/badges/component-badges.php:71
+msgid "Number of dislikes"
+msgstr "Кількість дізлайків"
+
+#: components/badges/component-badges.php:71
+msgid "Number of comments"
+msgstr "Кількість коментарів"
+
+#: components/badges/component-badges.php:71
+msgid "Activity"
+msgstr "Дії"
+
+#: components/badges/views/templates/badge-add.tpl.php:10
+#: components/badges/views/templates/badge-edit.tpl.php:12
+msgid "Select the icon badge (recommended size 24x24)"
+msgstr "Оберіть іконку бейджа (рекомендований розмір 24х24)"
+
+#: components/badges/views/templates/badge-add.tpl.php:15
+#: components/badges/views/templates/badge-edit.tpl.php:17
+msgid "Assign a badge to achieve:"
+msgstr "Додати бейдж при досягненні:"
+
+#: components/badges/views/templates/badge-add.tpl.php:18
+#: components/badges/views/templates/badge-edit.tpl.php:20
+msgid "total x likes all user comments"
+msgstr "сума х лайків всіх коментарів юзера"
+
+#: components/badges/views/templates/badge-add.tpl.php:22
+#: components/badges/views/templates/badge-edit.tpl.php:24
+msgid "total x dislikes all user comments"
+msgstr "сума х дизлайків всіх коментарів юзера"
+
+#: components/badges/views/templates/badge-add.tpl.php:26
+#: components/badges/views/templates/badge-edit.tpl.php:28
+msgid "number of comments"
+msgstr "кількість коментарів"
+
+#: components/badges/views/templates/badge-add.tpl.php:29
+#: components/badges/views/templates/badge-edit.tpl.php:31
+msgid "Number"
+msgstr "Кількість"
+
+#: components/badges/views/templates/badge-add.tpl.php:32
+#: components/badges/views/templates/badges-page.tpl.php:27
+msgid "Add"
+msgstr "Додати"
+
+#: components/badges/views/templates/badge-edit.tpl.php:9
+msgid "Current icon"
+msgstr "Іконка"
+
+#: components/badges/controllers/controller-badges.php:13
+msgid "Edit"
+msgstr "Редагувати"
+
+#: core/loader.php:19
+#, php-format
+msgid "Файл \"%s\" не существует!"
+msgstr "Файла \"%s\" не існує!"
+
+#: core/application-configuration.php:13
+msgid "de:comments"
+msgstr ""
+
+#: libraries/mvc-pdo/library-mvc-pdo.php:14
+msgid ""
+"Configuration file was not created! Permission denied! To enable all "
+"possibilities of the plugin the writing rights for this folder should be "
+"provided"
+msgstr ""
+
+#: libraries/mvc-pdo/library-mvc-pdo.php:22
+#: libraries/mvc-pdo/library-mvc-pdo.php:37
+msgid ""
+"Configuration file has not write permissions! To enable all possibilities of "
+"the plugin the writing rights for this file should be provided"
+msgstr ""
+
+msgid "Website"
+msgstr "Сайт"
+
+msgid "delete"
+msgstr "Видалити"
+
+msgid "Vote error"
+msgstr "Помилка голосування"
+
+#~ msgid "Общие"
+#~ msgstr "General"
+
+#~ msgid "Отображение"
+#~ msgstr "Display"
+
+#~ msgid "Ранние комментарии &rarr;"
+#~ msgstr "Ранние комментарии"
+
+#~ msgid "Новые комментарии &rarr;"
+#~ msgstr "New comments"
+
+#~ msgid "Вы уже зарегистрированы"
+#~ msgstr "You already have an account"
+
+#~ msgid "Войдите на сайт"
+#~ msgstr "Sign up"
+
+#~ msgid "%d комментов. Не хватает только вашего!"
+#~ msgstr "%d of comments. "
+
+#~ msgid "Войти с помощью:"
+#~ msgstr "Sign in using:"
+
+#~ msgid "Сайт"
+#~ msgstr "Website"

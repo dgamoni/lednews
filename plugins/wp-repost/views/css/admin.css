@@ -1,0 +1,151 @@
+.wrap h2 {
+	margin-top: 32px;
+}
+.wprepost .options {
+	overflow: hidden;
+	border: none;
+}
+.wprepost .option {
+	overflow: hidden;
+	border-bottom: dashed 1px #ccc;
+	padding-bottom: 9px;
+	padding-top: 9px;
+}
+.wprepost .sub-option{
+	padding-left: 225px;
+	margin-bottom: 5px;
+}
+.wprepost .option label {
+	display: block;
+	float: left;
+	width: 200px;
+	margin-right: 24px;
+	text-align: right;
+}
+.wprepost .option label.selectit {
+	text-align: left;
+}
+.wprepost .option input[type=text].small{
+	width: 60px;
+}
+.wprepost .sub-option label{
+	float: none;
+	display: inline;
+	margin: 0 5px 0 0;
+}
+.wprepost .option span {
+	display: block;
+	float: left;
+	margin-left: 230px;
+	margin-top: 6px;
+	clear: left;
+}
+.wprepost p.submit {
+	overflow: hidden;
+}
+.wprepost .option span {
+	color: #666;
+	display: block;
+}
+.wprepost .sub-option a{
+	text-decoration: none;
+}
+.user_details {
+	height: 35px;
+	border: 1px solid #fff;
+	float: left;
+	overflow: hidden;
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	margin-right: 10px;
+}
+.user_details .user_avatar {
+	float: left;
+	width: 35px;
+}
+.user_details .user_avatar img {
+	width: 100%;
+}
+.user_details .user_name {
+	float: left;
+	font-family: Roboto, "Helvetica Neue", HelveticaNeue, sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 2.4;
+	padding: 0px 10px;
+	color: #5C5C5C;
+}
+.user_details .remove_user {
+	display: block;
+	width: 35px;
+	height: 35px;
+	float: left;
+	border-left: 1px solid #ddd;
+}
+.user_details .remove_user .logout_user {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: url("../../assets/img/remove_account.png") no-repeat center center, #fff;
+}
+.user_details .remove_user .logout_user:hover {
+	background: url("../../assets/img/remove_account_hover.png") no-repeat center center, #fff;
+}
+.page_avatar{
+	width: 50px !important;
+	text-align: center;
+}
+.form-table.fbadd tr:hover{ background: #f1f1f1; }
+.form-table.fbadd th, .form-table.fbadd td{ padding: 10px 10px 10px 0; }
+
+#start-sharing .dashicons-before:before{ line-height: 1.3em; color: #2ea2cc; }
+
+/*	<METABOX />	*/
+#opp_repost_setting .options{
+	overflow: hidden;
+	border: none;
+}
+#opp_repost_setting .option {
+	overflow: hidden;
+	border-bottom: dashed 1px #ccc;
+	padding-bottom: 9px;
+	padding-top: 9px;
+}
+#opp_repost_setting .option.disabled {
+	background: #f1f1f1;
+}
+#opp_repost_setting .option label{
+	margin: 0 auto 5px;
+	display: inline-block;
+}
+#opp_repost_setting .option .small{
+	width: 50px;
+}
+#opp_repost_setting .sub-option{
+	float: left;
+	width: 80%;
+}
+#opp_repost_setting .sub-option .label{
+	float: left;
+	width: 120px;
+	text-align: right;
+	font-weight: bold;
+	margin: 0 10px 0 0;
+}
+#opp_repost_setting .sub-option .fields{
+	float: left;
+	margin: 0 auto 10px;
+}
+#opp_repost_setting .sub-option .fields.offset{
+	width: 80%;
+}
+#opp_repost_setting .sub-option .fields label{
+	
+}
+#opp_repost_setting .sub-option .fields label.opp_checklabel{
+	margin-right: 10px
+}
+#opp_repost_setting .sub-option .fields .opp_repost_on{
+	margin: 0px;
+}

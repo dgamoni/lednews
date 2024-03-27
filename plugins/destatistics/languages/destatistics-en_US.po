@@ -1,0 +1,802 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: decomments\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-27 19:47+0300\n"
+"PO-Revision-Date: 2014-05-05 13:05+0200\n"
+"Last-Translator: Владимир <vova.jah.shevchenko@gmail.com>\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;esc_html_e;_x:1,2c;"
+"_nx:4c,1,2;_ex:1,2c;__ngettext:1,2;_n:1,2\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: /var/www/decomments.loc/wp-content/plugins/"
+"decomments\n"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/languages/decom-language-container.php:7
+msgid "Comment deleted"
+msgstr "Комментарий удален"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/languages/decom-language-container.php:10
+msgid "Edited at"
+msgstr "Отредактировано"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/languages/decom-language-container.php:11
+msgid "delete"
+msgstr "Удалить"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/languages/decom-language-container.php:12
+msgid "Field do not zero."
+msgstr "Поле не равно нулю."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/languages/decom-language-container.php:13
+msgid "This field is required."
+msgstr "Это поле обязательно для заполнения."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/languages/decom-language-container.php:14
+msgid "Please checked some one!"
+msgstr "Пожалуйста, выберите что-нибудь"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/languages/decom-language-container.php:15
+msgid "Operation completed"
+msgstr "Операция выполнена"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/languages/decom-language-container.php:16
+msgid "The items weren\\'t deleted"
+msgstr "Элементы не были удалены"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/languages/decom-language-container.php:17
+msgid "Close"
+msgstr "Закрыть"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/languages/decom-language-container.php:18
+msgid "Loading..."
+msgstr "Загрузка..."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/core/loader.php:19
+#, php-format
+msgid "File \"%s\" doesn't exist!"
+msgstr "Файл \"%s\" не существует!"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/component-comments.php:29
+msgid "Verified data..."
+msgstr "Проверяются данные..."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/component-comments.php:145
+msgid "ERROR"
+msgstr "ОШИБКА"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/component-comments.php:145
+msgid "please type a comment."
+msgstr "пожалуйста, введите комментарий."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/component-comments.php:196
+msgid "Your comment is awaiting moderation."
+msgstr "Ваш комментарий ожидает модерации"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/component-comments.php:299
+msgid "Wrong login or password!"
+msgstr "Неправильный логин или пароль!"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/component-comments.php:301
+msgid "Redirection..."
+msgstr "Идет перенаправление..."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/controllers/controller-comments-votes.php:43
+msgid "Vote error"
+msgstr "Ошибка голосования"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/controllers/controller-comments.php:207
+msgid "Such user is already exists"
+msgstr "Такой пользователь уже существует"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/controllers/controller-comments.php:216
+msgid "Email is incorrect"
+msgstr "Неверный email"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/controllers/controller-comments.php:232
+msgid "Comment not edit."
+msgstr "Комментарий нельзя редактировать."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/controllers/controller-comments.php:235
+msgid "User not found."
+msgstr "Пользователь не найден."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/controllers/controller-comments.php:238
+msgid "Post status not public and not private."
+msgstr "Пост не опубликован и не приватный."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/controllers/controller-comments.php:241
+msgid "Comment on draft."
+msgstr "Комментарий в черновике."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/controllers/controller-comments.php:244
+msgid "Comment on password protected."
+msgstr "Комментарий защищён паролем."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/controllers/controller-comments.php:247
+msgid "Sorry, you must be logged in to post a comment."
+msgstr ""
+"Извините, Вы должны залогиниться, чтобы иметь возможность комментировать."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/controllers/controller-comments.php:253
+msgid "please enter a valid name or email address."
+msgstr "пожалуйста, введите правильное имя или адрес почты."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/controllers/controller-comments.php:256
+msgid "Comment dublicate!"
+msgstr "Комментарий дублируется!"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/controllers/controller-comments.php:368
+msgid "Unapprove"
+msgstr "Отклонить"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/controllers/controller-comments.php:372
+msgid "Approve"
+msgstr "Утвердить"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/controllers/controller-comments.php:377
+msgid "Trash"
+msgstr "Удалить"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/controllers/controller-comments.php:378
+msgid "Spam"
+msgstr "Спам"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/controllers/controller-comments.php:379
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/view-comments.php:186
+msgid "Edit"
+msgstr "Редактировать"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/classes/comments-walker.php:124
+#, php-format
+msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">says:</span>"
+msgstr "<cite class=\"fn\">%s</cite> <span class=\"says\">говорит:</span>"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/classes/comments-walker.php:134
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s в %2$s"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/classes/comments-walker.php:134
+msgid "(Edit)"
+msgstr "(Редактировать)"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/classes/files-upload.php:462
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/classes/files-upload.php:474
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/classes/files-upload.php:487
+msgid "Unknown upload error."
+msgstr "Неизвестная ошибка загрузки"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/classes/files-upload.php:466
+msgid "Upload directory is invalid. Please check."
+msgstr "Каталог для загрузок является недействительным. Пожалуйста, проверьте."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/classes/files-upload.php:467
+msgid "Uploaded file exceeds the upload_max_filesize directive in php.ini."
+msgstr ""
+"Размер принятого файла превысил максимально допустимый размер, который задан "
+"директивой upload_max_filesize конфигурационного файла php.ini. "
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/classes/files-upload.php:468
+msgid ""
+"Uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the "
+"HTML form."
+msgstr ""
+"Размер загружаемого файла превысил значение MAX_FILE_SIZE, указанное в HTML-"
+"форме."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/classes/files-upload.php:469
+msgid "Uploaded file was only partially uploaded."
+msgstr "Загружаемый файл был получен только частично."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/classes/files-upload.php:470
+msgid "File was not uploaded."
+msgstr "Файл не был загружен."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/classes/files-upload.php:471
+msgid "Missing a temporary folder."
+msgstr "Отсутствует временная папка."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/classes/files-upload.php:472
+msgid "Failed to write file to disk."
+msgstr "Не удалось записать файл на диск."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/classes/files-upload.php:473
+msgid "File upload stopped by extension."
+msgstr "Загрузка файла остановлена расширением."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/classes/files-upload.php:475
+msgid "Extension of uploaded file is invalid. Please upload an image."
+msgstr ""
+"Расширение загружаемого файла недействительно. Пожалуйста, загрузите "
+"картинку."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/classes/files-upload.php:476
+msgid "MIME type of uploaded file is invalid. Please upload an image."
+msgstr ""
+"MIME-тип загружаемого файла недействительный. Пожалуйста, загрузите картинку."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/classes/files-upload.php:477
+msgid "File size is invalid. Maximum file size is %g MB."
+msgstr "Размер файла недействительный. Максимальный размер файла %g MB."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/classes/files-upload.php:478
+msgid "File is already exists. Please try again."
+msgstr "Файл уже существует. Пожалуйста, попробуйте ещё."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/classes/files-upload.php:479
+msgid "Image width is invalid. Maximum image width is %g px."
+msgstr "Ширина картинки недопустима. Максимальная ширина %g px."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/classes/files-upload.php:480
+msgid "Image height is invalid. Maximum image height is %g px."
+msgstr "Высота картинки недопустима. Максимальная высота %g px."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/classes/files-upload.php:481
+#, php-format
+msgid "Uploaded file could not be moved to %s."
+msgstr "Загруженный файл не может быть перемещён в %s."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/classes/files-upload.php:482
+#, php-format
+msgid "Uploaded file %s could not be upload."
+msgstr "Загружаемый файл %s не может быть загружен."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/view-comments.php:179
+msgid "Author"
+msgstr "Автор"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/view-comments.php:186
+msgid "Remained"
+msgstr "Осталось"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/view-comments.php:186
+msgid "minutes"
+msgstr "мин"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/view-comments.php:187
+msgid "Remove"
+msgstr "Удалить"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/view-comments.php:207
+msgid "Edited by moderator"
+msgstr "Отредактировано модератором"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/view-comments.php:229
+msgid "Moderate"
+msgstr "Править"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/view-comments.php:233
+msgid "Reply"
+msgstr "Ответить"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/view-comments.php:235
+msgid "Share"
+msgstr "Поделиться"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/comment-form.tpl.php:23
+msgid "To add a new picture, remove the old"
+msgstr "Для добавления новой картинки удалите старую"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/comment-form.tpl.php:25
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/comment-form.tpl.php:39
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/renderComments.php:254
+msgid "Fire"
+msgstr "Огонь"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/comment-form.tpl.php:26
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/comment-form.tpl.php:40
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/renderComments.php:255
+msgid "Cancel"
+msgstr "Кэнсил"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/comment-form.tpl.php:30
+msgid "Add a picture"
+msgstr "Добавить изображение"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/comment-form.tpl.php:55
+msgid "Attention"
+msgstr "Внимание"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/comment-form.tpl.php:61
+msgid "E-mail is already registered on the site. Please use the login form"
+msgstr ""
+"E-mail уже зарегистрирован на сайте. Пожалуйста воспользуйтесь формой для "
+"авторизации"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/comment-form.tpl.php:63
+msgid "You entered an incorrect username or password"
+msgstr "Вы ввели неправильный логин или пароль"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/comment-form.tpl.php:67
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/renderComments.php:226
+msgid "Name"
+msgstr "Имя"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/comment-form.tpl.php:75
+msgid "Password"
+msgstr "Пароль"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/comment-form.tpl.php:86
+msgid "Log in"
+msgstr "Войти"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/comment-form.tpl.php:96
+msgid "Remember me"
+msgstr "Запомнить меня"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/renderComments.php:187
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/renderComments.php:188
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/renderComments.php:189
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/renderComments.php:208
+msgid "comment. And where is yours one!"
+msgid_plural "comments. And where is yours one!"
+msgstr[0] "коммент. "
+msgstr[1] "коммента."
+msgstr[2] "комментов."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/renderComments.php:216
+msgid "You are logged in as"
+msgstr "Вы вошли как"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/renderComments.php:216
+msgid "Log out"
+msgstr "Выйти"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/renderComments.php:230
+msgid "E-mail"
+msgstr "Почта"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/renderComments.php:233
+msgid "Authorization"
+msgstr "Авторизация"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/renderComments.php:236
+msgid "Website"
+msgstr "Сайт"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/renderComments.php:259
+msgid "Add a quote"
+msgstr "Добавить цитату"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/renderComments.php:270
+msgid "Subscribe to the answers to my beautiful comment"
+msgstr "Подписаться на ответы к моему прекрасному комменту"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/renderComments.php:275
+msgid "Subscribe to all comments"
+msgstr "Подписаться на все комменты"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/renderComments.php:284
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/renderComments.php:383
+msgid "Ability to comment is prohibited."
+msgstr "Возможность комментирования запрещена."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/renderComments.php:295
+msgid "Sorting"
+msgstr "Сортировка"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/renderComments.php:297
+msgid "The best"
+msgstr "Лучший"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/renderComments.php:298
+msgid "The newest"
+msgstr "Самые новые"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/renderComments.php:299
+msgid "The earliest"
+msgstr "Самые ранние"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/renderComments.php:365
+msgid "Loading comments, please wait"
+msgstr "Подгружаем комментарии, пожалуйста подождите"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/renderComments.php:367
+msgid "Load more"
+msgstr "Загрузить ещё"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/renderComments.php:407
+msgid "Previous comments"
+msgstr "Предыдущие комментарии"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/comments/views/templates/renderComments.php:408
+msgid "Next comments"
+msgstr "Следующие комментарии"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/debug/views/view-sandbox.php:8
+msgid "No data to display"
+msgstr "Нет данных для отображения"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/component-settings.php:23
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/templates/settings-page.tpl.php:5
+msgid "Settings"
+msgstr "Настройки"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/controllers/controller-settings.php:164
+msgid "Changes saved successfully."
+msgstr "Изменения сохранены успешно."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:13
+msgid "Settings were saved successfully"
+msgstr "Настройки успешно сохранены"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:45
+msgid "The size of the avatar (Height)"
+msgstr "Размер аватара (Высота)"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:46
+msgid "The size of the avatar (Width)"
+msgstr "Размер аватара (Ширина)"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:47
+msgid "Time to edit / delete comments"
+msgstr "Время редактирования/удаления комментария"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:48
+msgid "Number of comments per page"
+msgstr "Количество комментариев на каждой странице"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:49
+msgid "Add dofollow or nofollow to commentators links?"
+msgstr "Добавлять dofollow или nofollow к ссылкам комментаторов?"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:50
+msgid "Show subscribe to new comments of the post"
+msgstr "Отобразить подписку на новые комментарии к посту"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:51
+msgid "Allow subscribe to new comments of the post by default"
+msgstr "Разрешить подписку на новые комментарии к посту по-умолчанию"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:52
+msgid "Display the subscription for new answers to the commentary"
+msgstr "Отобразить подписку на новые ответы к комментарию"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:53
+msgid "Allow subscription to new replies to the comment by default"
+msgstr "Разрешить подписку на новые ответы к комментарию по-умолчанию"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:54
+msgid "Allocate comments of post author"
+msgstr "Выделять комментарии автора поста?"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:55
+msgid "Background author's comment"
+msgstr "Фон комментария автора"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:56
+msgid "Output numbers of comments"
+msgstr "Выводить порядковые номера комментариев"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:57
+msgid "Allow to quote comments"
+msgstr "Разрешить цитировать комментарии"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:58
+msgid "Output the total number of comments at the top"
+msgstr "Выводить общее кол-во комментариев вверху"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:59
+msgid "Enable client validation fields"
+msgstr "Включить клиентскую валидацию полей"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:60
+msgid "Sort comments"
+msgstr "Сортировка комментариев"
+
+# Затемнять комментарии с отрицательным рейтенгом
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:62
+msgid "Show low opacity comments with negative ratings"
+msgstr "Показывать комментарии с отрицательным рейтингом с малым opacity"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:63
+msgid "Show two the highest ranking comments at the top of the list"
+msgstr "Показывать два комментария с наивысшим рейтингом вверху списка"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:64
+msgid "The minimum number of likes to display a comment at the top of the list"
+msgstr ""
+"Минимальное количество лайков для отображения комментария вверху списка"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:65
+msgid "The maximum size of uploaded images"
+msgstr "Максимальный размер загружаемой картинки"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:66
+msgid "Display avatars authors from the right side"
+msgstr "Отображения аватаров авторов комментариев справа"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:67
+msgid "Display an adding comments form at the top"
+msgstr "Отображать форму добавления комментариев вверху"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:68
+msgid "Allow endless feed"
+msgstr "Разрешить бесконечную ленту"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:69
+msgid "Allow lazy load"
+msgstr "Разрешить медленную загрузку"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:70
+msgid "Allow dislikes"
+msgstr "Разрешить дизлайк"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:71
+msgid "Enable embeding of external media URLs"
+msgstr "Включить вставку внешних медиассылок"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/view-settings-page.php:72
+msgid "Maximum external media URLs count"
+msgstr "Максимальное количество внешних медиассылок"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/templates/settings-page.tpl.php:10
+msgid "Comments"
+msgstr "Комментарии"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/templates/settings-page.tpl.php:75
+msgid "Vote"
+msgstr "Голосование"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/templates/settings-page.tpl.php:98
+msgid "Avatar"
+msgstr "Аватар"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/templates/settings-page.tpl.php:105
+msgid "Avatar by default"
+msgstr "Аватар по-умолчанию"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/templates/settings-page.tpl.php:126
+msgid "Subscription"
+msgstr "Подписка"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/templates/settings-page.tpl.php:151
+msgid "Files upload"
+msgstr "Загрузка файлов"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/settings/views/templates/settings-page.tpl.php:165
+msgid "Save"
+msgstr "Сохранить"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/activation/views/view-activation.php:10
+msgid "Invalid Serial Key!"
+msgstr "Неверный серийный ключ!"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/activation/views/templates/activation.tpl.php:6
+msgid "Activate plugin"
+msgstr "Активация плагина"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/activation/views/templates/activation.tpl.php:16
+msgid "Please enter Name"
+msgstr "Введите пожалуйста Имя"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/activation/views/templates/activation.tpl.php:28
+msgid "Please enter Email"
+msgstr "Введите пожалуйста адрес электронной почты"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/activation/views/templates/activation.tpl.php:40
+msgid "Please enter Activation key"
+msgstr "Введите пожалуйста ключ активации"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/notification-messages/component-notification-messages.php:7
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/notification-messages/component-notification-messages.php:57
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/notification-messages/views/templates/page-notification-messages.tpl.php:5
+msgid "Notifications"
+msgstr "Уведомления"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/notification-messages/component-notification-messages.php:8
+msgid "The texts of emails"
+msgstr "Тексты писем"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/notification-messages/controllers/controller-notification-messages.php:25
+msgid "The changes are not saved! Some fields are not completed."
+msgstr "Изменения не сохранены! Не все поля заполнены."
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/notification-messages/controllers/controller-notification-messages.php:38
+msgid "Error saving!"
+msgstr "Ошибка при сохранении!"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/notification-messages/views/templates/page-notification-messages.tpl.php:26
+msgid "View supported shortcodes"
+msgstr "Просмотреть поддерживаемые шорткоды"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/notification-messages/views/templates/page-notification-messages.tpl.php:29
+msgid "Supported shortcodes"
+msgstr "Поддерживаемые шорткоды"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/notification-messages/views/templates/page-notification-messages.tpl.php:32
+msgid "Comment's author"
+msgstr "Автор комментария"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/notification-messages/views/templates/page-notification-messages.tpl.php:36
+msgid "Comment creation date"
+msgstr "Дата создания комментария"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/notification-messages/views/templates/page-notification-messages.tpl.php:40
+msgid "Comment text"
+msgstr "Текст комментария"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/notification-messages/views/templates/page-notification-messages.tpl.php:44
+msgid "Comment link"
+msgstr "Ссылка на комментарий"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/notification-messages/views/templates/page-notification-messages.tpl.php:48
+msgid "Post title, to which a comment has been added"
+msgstr "Заголовок поста, к которому был добавлен комментарий"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/notification-messages/views/templates/page-notification-messages.tpl.php:52
+msgid "Post link"
+msgstr "Cсылка на комментируемый пост"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/badges/component-badges.php:30
+msgid "Badges"
+msgstr "Бейджи"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/badges/component-badges.php:38
+msgid "Add badge"
+msgstr "Добавить бейдж"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/badges/component-badges.php:45
+msgid "Edit badge"
+msgstr "Редактировать бейдж"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/badges/component-badges.php:71
+msgid "Number of likes"
+msgstr "Количество лайков"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/badges/component-badges.php:71
+msgid "Number of dislikes"
+msgstr "Количество дизлайков"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/badges/component-badges.php:71
+msgid "Number of comments"
+msgstr "Количество комментариев"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/badges/component-badges.php:71
+msgid "Activity"
+msgstr "Действия"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/badges/controllers/controller-badges.php:92
+msgid "Badge was removed successfully"
+msgstr "Бейдж был удалён успешно"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/badges/views/templates/badge-add.tpl.php:10
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/badges/views/templates/badge-edit.tpl.php:12
+msgid "Select the icon badge (recommended size 24x24)"
+msgstr "Выберите иконку бейджа (рекомендуемый размер 24х24)"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/badges/views/templates/badge-add.tpl.php:15
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/badges/views/templates/badge-edit.tpl.php:17
+msgid "Assign a badge to achieve:"
+msgstr "Назначить бейдж по достижению:"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/badges/views/templates/badge-add.tpl.php:18
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/badges/views/templates/badge-edit.tpl.php:20
+msgid "total x likes all user comments"
+msgstr "суммарно х лайков всех комментариев пользователя"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/badges/views/templates/badge-add.tpl.php:22
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/badges/views/templates/badge-edit.tpl.php:24
+msgid "total x dislikes all user comments"
+msgstr "суммарно х дизлайков всех комментариев пользователя"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/badges/views/templates/badge-add.tpl.php:26
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/badges/views/templates/badge-edit.tpl.php:28
+msgid "number of comments"
+msgstr "числа комментариев"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/badges/views/templates/badge-add.tpl.php:29
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/badges/views/templates/badge-edit.tpl.php:31
+msgid "Number"
+msgstr "Количество"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/badges/views/templates/badge-add.tpl.php:32
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/badges/views/templates/badges-page.tpl.php:27
+msgid "Add"
+msgstr "Добавить"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/components/badges/views/templates/badge-edit.tpl.php:9
+msgid "Current icon"
+msgstr "Текущая иконка"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/libraries/mvc-pdo/library-mvc-pdo.php:14
+msgid ""
+"Configuration file was not created! Permission denied! To enable all "
+"possibilities of the plugin the writing rights for this folder should be "
+"provided"
+msgstr ""
+"Конфигурационный файл не был создан. Задайте права на запись для следующей "
+"папки"
+
+#: /var/www/decomments.loc/wp-content/plugins/decomments/libraries/mvc-pdo/library-mvc-pdo.php:22
+#: /var/www/decomments.loc/wp-content/plugins/decomments/libraries/mvc-pdo/library-mvc-pdo.php:36
+msgid ""
+"Configuration file has not write permissions! To enable all possibilities of "
+"the plugin the writing rights for this file should be provided"
+msgstr ""
+"Конфигурационный файл не имеет надлежащих прав. Задайте права на запись для "
+"следующего файла"
+
+#~ msgid "Settings saved."
+#~ msgstr "Настройки сохранены."
+
+#~ msgid "Clean Cache"
+#~ msgstr "Очистить кэш"
+
+#, fuzzy
+#~ msgid "такой пользователь уже существует"
+#~ msgstr "File \"%s\" doesn't exist!"
+
+#~ msgid " comment. And where is yours one!"
+#~ msgid_plural " comments. And where is yours one!"
+#~ msgstr[0] " коммент. Не хватает только вашего!"
+#~ msgstr[1] " коммента. Не хватает только вашего!"
+#~ msgstr[2] " комментов. Не хватает только вашего!"
+
+#~ msgid "Edited by"
+#~ msgstr "Отредактировано"
+
+#~ msgid "comments. And where is yours one!"
+#~ msgstr "комментов. Не хватает только вашего!"
+
+#, fuzzy
+#~ msgid "%d comment. And where is yours one!"
+#~ msgid_plural "%d comments. And where is yours one!"
+#~ msgstr[0] "коммент. Не хватает только вашего!"
+#~ msgstr[1] "коммента. Не хватает только вашего!"
+#~ msgstr[2] "комментов. Не хватает только вашего!"
+
+#~ msgctxt "less_four"
+#~ msgid "comments. And where is yours one!"
+#~ msgstr "коммента. Не хватает только вашего!"
+
+#~ msgid "Picture"
+#~ msgstr "Аватар"
+
+#~ msgid "comment"
+#~ msgstr "коммент"
+
+#~ msgid "Following comments"
+#~ msgstr "Следующие комментарии"
+
+#~ msgid "Comment"
+#~ msgstr "комментария"
+
+#~ msgid "The attached file validation is invalid!"
+#~ msgstr "Файл прошел валидацию"
+
+#~ msgid "Общие"
+#~ msgstr "General"
+
+#~ msgid "Отображение"
+#~ msgstr "Display"
+
+#~ msgid "Ранние комментарии &rarr;"
+#~ msgstr "Ранние комментарии"
+
+#~ msgid "Новые комментарии &rarr;"
+#~ msgstr "New comments"
+
+#~ msgid "Вы уже зарегистрированы"
+#~ msgstr "You already have an account"
+
+#~ msgid "Войдите на сайт"
+#~ msgstr "Sign up"
+
+#~ msgid "%d комментов. Не хватает только вашего!"
+#~ msgstr "%d of comments. "
+
+#~ msgid "Войти с помощью:"
+#~ msgstr "Sign in using:"
+
+#~ msgid "Сайт"
+#~ msgstr "Website"

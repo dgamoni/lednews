@@ -1,12 +1,11 @@
 <?php
 
 /*
- * @package (MT) WordPress IPSConnect
+  * @package (Pro) WordPress IPSConnect
  * @brief Settings Topics Abstraction
- * @version 1.1.1
- * @author Robert Marcher
- * @link http://www.marchertech.com/ Marcher Technologies
- * @copyright Copyright (c) 2013, Marcher Technologies All Rights Reserved
+ * @author Provisionists (based on Marcher Technologies WP IPS Connect)
+ * @link https://provisionists.com
+ * @copyright Copyright (c) 2014, Provisionists LLC All Rights Reserved
  */
 
 class ipsConnectSettingsTopics extends ipsConnectSettingsXmlRpc {

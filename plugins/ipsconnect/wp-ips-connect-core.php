@@ -3,7 +3,7 @@
 /*
  * @package (Pro) WordPress IPSConnect
  * @brief Big Bad John, The Core wpIpsConnect.
- * @version 1.1.2
+ * @version 1.1.3
  * @author Provisionists (based on Marcher Technologies WP IPS Connect)
  * @link https://provisionists.com
  * @copyright Copyright (c) 2014, Provisionists LLC All Rights Reserved
@@ -21,7 +21,7 @@ class wpIpsConnect
 	public static $members = array();
 	public static $connectIds = array();
 	protected $postClass;
-
+    protected $redirect_to = '';
 	final protected function __construct()
 	{
 		
@@ -624,10 +624,21 @@ class wpIpsConnect
 
 	public function getReturnUrl()
 	{
-		$wpUrlBase = isset($_REQUEST['redirect_to']) ? urldecode($_REQUEST['redirect_to']) : '';
-		$wpUrlBase = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : $this->settings['returnUrl'];
+        if(empty($this->redirect_to)){
+
+            if (isset($_REQUEST['redirect_to'])){
+                $this->redirect_to = urldecode($_REQUEST['redirect_to']);
+            }
+            elseif(isset($_SERVER['HTTP_REFERER'])){
+                $this->redirect_to = $_SERVER['HTTP_REFERER'];
+            }
+            else{
+                $this->redirect_to = $this->settings['returnUrl'];
+            }
+        }
+
+		$wpUrlBase = $this->redirect_to;
 		$wpUrlBase = ( strpos($wpUrlBase, 'wp-admin') !== FALSE && !is_super_admin() ) ? $this->settings['returnUrl'] : $wpUrlBase;
-		//@see https://provisionists.com/tracker/_/wp-ips-connect/continuous-wp-login-loop-r15
 		$wpUrlBase = ( strpos($wpUrlBase, 'wp-login.php') !== FALSE ) ? $this->settings['returnUrl'] : $wpUrlBase;
 		return $wpUrlBase;
 	}
