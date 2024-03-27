@@ -1,4 +1,4 @@
-<div class="sidebar four columns">
+<div class="sidebar sidebar-down four columns">
 
 	
 		<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebarright-down') ) : // begin primary sidebar widgets ?>	

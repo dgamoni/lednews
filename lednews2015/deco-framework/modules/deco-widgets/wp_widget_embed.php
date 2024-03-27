@@ -26,12 +26,20 @@ class WPWidgetEmbed
         $wp->add_query_var('em_embed'); 
         $wp->add_query_var('em_domain');
         $wp->add_query_var('size_button');
+        $wp->add_query_var('posttype');
+        $wp->add_query_var('count');
+        $wp->add_query_var('border');
+        $wp->add_query_var('bordercolor');
+        $wp->add_query_var('fontt');
+        $wp->add_query_var('button_color');
         //$size_button = 0;
     }
     
     //export for informer
-    private function export_posts()
+    private function export_posts( $posttype = 'news', $count =3, $border='', $bordercolor='e6e6e6', $fontt="Arial")
     {
+    	// var_dump($border);
+    	 //var_dump($fontt);
 
     $outstring  = '<html>';
     $outstring .= '<head><style>';
@@ -42,10 +50,13 @@ class WPWidgetEmbed
              padding-left:10px;
              margin:0;
           }
+          li > a , .inf-content , .inf-content a {
+             font-family:'.$fontt.', Helvetica, Sans-serif;
+          }
           
           li > a , .inf-content , .inf-content a {
            
-             font-family: Arial, Helvetica, Sans-serif;
+             
              font-size:14px;
              color: #263ce3;
           }
@@ -53,6 +64,7 @@ class WPWidgetEmbed
             padding-left: 10px;
             padding-right: 10px;
           }
+
           .inf-content .entry-meta {
               color: #999999;
               font-size: 12px;
@@ -60,16 +72,19 @@ class WPWidgetEmbed
           li {
               list-style: none;
               display: inline-block;
-              width: 30%;
+              width: 280px;
               padding: 10px 0 3px 0;
               vertical-align: top;
               border: 1px solid #c0c0c0;
               min-height: 90px;
-              margin-right: 10px;
+              margin: 5px;
           }
           .inf-thumbnail {
             float:left;
               padding: 3px 10px 10px;
+          }
+           .inf-thumbnail img {
+          	border:'.$border.' #'.$bordercolor.';
           }
           .clear {
               clear: both;
@@ -80,10 +95,12 @@ class WPWidgetEmbed
     $outstring .= '</style></head><body>';
          
         /* Here we get recent posts for the blog */
+        //var_dump($posttype);
+
         $args = array(
-            'numberposts' => 3,
+            'numberposts' => $count,
             'offset' => 0,
-            'category' => 'news',
+            'category_name' => $posttype,
             'orderby' => 'post_date',
             'order' => 'DESC',
             'post_type' => 'post',
@@ -121,7 +138,9 @@ class WPWidgetEmbed
                             </div>
 
                             <a target="_blank" href="<?php echo get_permalink( $post_id ); ?>">
-                                <?php echo $recent["post_title"]; ?>
+                                <?php //echo $recent["post_title"];
+                                 echo short_title_widget('...',100, $recent["post_title"]);
+                                 ?>
                             </a>
                         </div> 
                         <div class="clear"></div>   
@@ -141,8 +160,13 @@ class WPWidgetEmbed
     }
 
     //export for button
-    private function export_button($size_button=0)
+    private function export_button($size_button=0, $button_color)
     {
+      
+      if ($button_color === undefined) {
+        $button_color='263ce3';
+      }
+       //var_dump($button_color);
 
     $outstring  = '<html>';
     $outstring .= '<head><style>';
@@ -164,17 +188,17 @@ class WPWidgetEmbed
           .led-button-3 {
              width: 31px;
              height:31px;
-             background-color: #263ce3;
+             background-color: #'.$button_color.';
           }
           .led-button-2 {
              width: 88px;
              height:15px;
-             background-color: #263ce3;
+             background-color: #'.$button_color.';
           }
           .led-button-1 {
              width: 88px;
              height:33px;
-             background-color: #263ce3;
+             background-color: #'.$button_color.';
           }';
 
           $outstring .= '</style></head><body>';
@@ -260,24 +284,31 @@ class WPWidgetEmbed
         
         /* 'embed' variable is set, export any content you like */
         
+        // var_dump(get_query_var('posttype'));
+        // var_dump(get_query_var('size_button'));
+
+
+
         if(get_query_var('em_embed') == 'posts')
           { 
-              $data_to_embed = $this->export_posts();
+              $data_to_embed = $this->export_posts( get_query_var('posttype'), get_query_var('count'), get_query_var('border'), get_query_var('bordercolor'), get_query_var('fontt')  );
               echo $data_to_embed;
           } 
         else 
         if(  (get_query_var('em_embed') == 'button') && (get_query_var('size_button') != 0) )
           { 
               
-              $data_to_embed = $this->export_button( get_query_var('size_button') );
+              $data_to_embed = $this->export_button( get_query_var('size_button'), get_query_var('button_color') );
               echo $data_to_embed;
           }
         else 
-        if(get_query_var('em_embed') == 'button')
+        // if( (get_query_var('em_embed') == 'button')  )
           { 
               
-              $data_to_embed = $this->export_button();
-              echo $data_to_embed;
+              // $data_to_embed = $this->export_button();
+              // echo $data_to_embed;
+                    $data_to_embed = $this->export_posts( get_query_var('posttype'), get_query_var('count'), get_query_var('border'), get_query_var('bordercolor'), get_query_var('fontt')  );
+        echo $data_to_embed;
           }
         
         exit();

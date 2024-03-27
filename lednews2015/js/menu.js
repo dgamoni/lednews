@@ -219,6 +219,92 @@ jQuery(document).ready(function($){
     });
 //end ajax
 
+// colorpiker
+$('.color-informer').colpick({
+    layout:'hex',
+    submit:1,
+    colorScheme:'light',
+    onChange:function(hsb,hex,rgb,el,bySetColor) {
+        $(el).css('border-color','#'+hex);
+        // Fill the text box just if the color was set using the picker, and not the colpickSetColor function.
+        if(!bySetColor) $(el).val(hex);
+    }
+}).keyup(function(){
+    $(this).colpickSetColor(this.value);
+
+});
+// colorpiker button
+$('.button-color').colpick({
+    layout:'hex',
+    submit:1,
+    colorScheme:'light',
+    onChange:function(hsb,hex,rgb,el,bySetColor) {
+        $(el).css('border-color','#'+hex);
+        // Fill the text box just if the color was set using the picker, and not the colpickSetColor function.
+        if(!bySetColor) $(el).val(hex);
+        
+        var button_color = hex;
+        //console.log(button_color);
+        var button_size = $('.button-size').val();
+        $('#inner-informer-button').html("<script> var widget_embed = 'button'; var size_button = '"+button_size+"'; var button_color='"+button_color+"'; </script>");
+        $('#base-inner-informer-button').html('<script src="http://test.lednews.ru/widget/wp-widget-button.js" type="text/javascript"></script>');
+        $('#xmp-informer-button').html('<xmp><!-- custom код кнопки lednews.ru --><script type="text/javascript"> var widget_embed = "button";var size_button = "'+button_size+'"; var button_color="'+button_color+'";</script><script src="http://test.lednews.ru/widget/wp-widget-button.js" type="text/javascript"></script><div id="embed-widget-container2"></div><!-- end код кнопки lednews.ru --></xmp>');
+    }
+}).keyup(function(){
+    $(this).colpickSetColor(this.value);
+
+
+});
+
+
+
+// informer new script
+$('.change-informer').change(function(event) {
+    //console.log($(this).val());
+    var this_posttype = $('.change-informer-post_type').val();
+    var count = $('.change-informer-count').val();
+    var informer_width = $('.change-informer-width').val();
+    var informer_type = $('.informer_type').val();
+
+    var img_border_px = $('.change-informer-img-border-px').val();
+    var img_color = $('.change-informer-img-color').val();
+    var img_border_type = $('.change-informer-img-border-type').val();
+    //console.log(img_color);
+
+    var font = $('.change-font').val();
+
+    $('#inner-informer').html("<script>var widget_embed = 'posts'; var posttype = '"+this_posttype+"';var count = '"+count+"';var width_iframe = '"+informer_width+"'; var informer_type = '"+informer_type+"'; var img_border_px = '"+img_border_px+"'; var img_color = '"+img_color+"'; var img_border_type = '"+img_border_type+"'; var fontt = '"+font+"';</script>");
+    $('#base-inner-informer').html('<script src="http://test.lednews.ru/widget/wp-widget.js" type="text/javascript"></script>');
+    $('#xmp-informer').html("<xmp><!-- custom informer code lednews --><script>var widget_embed = 'posts'; var posttype = '"+this_posttype+"';var count = '"+count+"'; var width_iframe = '"+informer_width+"'; var informer_type = '"+informer_type+"'; var img_border_px = '"+img_border_px+"'; var img_color = '"+img_color+"'; var img_border_type = '"+img_border_type+"'; var fontt = '"+font+"';</script><script src='http://test.lednews.ru/widget/wp-widget.js' type='text/javascript'></script><div id='embed-widget-container'></div><!-- informer code lednews --></xmp>");
+    
+});
+
+// informer new script for button
+$('.change-informer-button').change(function(event) {
+     var button_size = $('.button-size').val();
+     var button_color = $('.button-color-val').val();
+     //console.log(button_color);
+    
+    $('#inner-informer-button').html("<script> var widget_embed = 'button'; var size_button = '"+button_size+"'; var button_color='"+button_color+"'; </script>");
+    $('#base-inner-informer-button').html('<script src="http://test.lednews.ru/widget/wp-widget-button.js" type="text/javascript"></script>');
+    $('#xmp-informer-button').html('<xmp><!-- custom код кнопки lednews.ru --><script type="text/javascript"> var widget_embed = "button";var size_button = "'+button_size+'"; var button_color="'+button_color+'";</script><script src="http://test.lednews.ru/widget/wp-widget-button.js" type="text/javascript"></script><div id="embed-widget-container2"></div><!-- end код кнопки lednews.ru --></xmp>');
+    
+});
+// $('.colpick_submit').click(function(event) {
+//      var button_size = $('.button-size').val();
+//       var button_color = $('.button-color-val').val();
+//      console.log(button_color);
+    
+//     $('#inner-informer-button').html("<script> var widget_embed = 'button'; var size_button = '"+button_size+"'; </script>");
+//     $('#base-inner-informer-button').html('<script src="http://test.lednews.ru/widget/wp-widget-button.js" type="text/javascript"></script>');
+
+   
+//     $('#xmp-informer-button').html('<xmp><!-- custom код кнопки lednews.ru --><script type="text/javascript"> var widget_embed = "button";var size_button = "'+button_size+'";</script><script src="http://test.lednews.ru/widget/wp-widget-button.js" type="text/javascript"></script><div id="embed-widget-container2"></div><!-- end код кнопки lednews.ru --></xmp>');
+    
+// });
+
+
+
 		// post 
 		//$('.uptolike-buttons-content').css('display', 'none'); 
 
@@ -228,5 +314,12 @@ jQuery(document).ready(function($){
 		// }, function () {
 		//     $(".uptolike-buttons-content").css({display: 'none'});
 		// });
+
+
+
 		
 });    
+
+
+ 
+ 

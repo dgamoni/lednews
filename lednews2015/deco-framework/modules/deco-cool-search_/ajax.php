@@ -29,6 +29,7 @@ if ( ! function_exists( 'dc_ajax_search' ) ) {
 					setup_postdata( $post );
 					
 						get_template_part('content');
+						//get_template_part('content-search');
 					
 
 					// $image   = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'deco_thumb_280_200' );

@@ -6,6 +6,8 @@
         <h6 class="main-title">Светотехника России и мира</h6>
         
         <?php
+
+
         global $num_posts; 
         $num_posts = 0;
 
@@ -86,7 +88,7 @@
 <?php get_template_part('led-gallery');  ?>
 
 <!--  #wrapperpub 2 нижний блок-->
-<div id="wrapper" class="container">
+<div id="wrapper" class="container wrapper-down">
 
     <div id="container">
         <div id="content" class="nine columns">

@@ -15,14 +15,21 @@ class Deco_Widget_Top_Banner5 extends WP_Widget {
 		extract( $args );
 
 		$content = $instance['content'];
+		$link = $instance['link'];
 		?>
-		<div class="ledbanner">
+		<div class="ledbanner led-header-banner">
 			<div id="wrapper" class="container">
 				<?php if ( $content ) { ?>
 					<?php echo $content; ?>
 				<?php } else { ?>
 					<a href="<?php echo esc_url(home_url( '/' )); ?>">
-						<img src="<?php echo DECO_THEME_URL; ?>images/banner-header.png">
+						<?php if ($link ) { ?>
+							<img src="<?php echo $link; ?>">
+						<?php } else { ?>
+							<img src="<?php echo DECO_THEME_URL; ?>images/banner-header.png">
+							<!-- <img src="<?php echo DECO_THEME_URL; ?>images/header-banner-1000-250.png"> -->
+						<?php } ?>
+						
 					</a>
 				<?php } ?>
 			</div>
@@ -37,6 +44,7 @@ class Deco_Widget_Top_Banner5 extends WP_Widget {
 		$instance = $old_instance;
 
 		$instance['content'] = $new_instance['content'];
+		$instance['link'] = $new_instance['link'];
 
 		return $instance;
 	}
@@ -50,11 +58,18 @@ class Deco_Widget_Top_Banner5 extends WP_Widget {
 
 		$content = $instance['content'];
 
+		$link = $instance['link'];
+
 		?>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'content' ); ?>">Код банера:</label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'content' ); ?>"
 			       name="<?php echo $this->get_field_name( 'content' ); ?>" type="text" value="<?php echo $content; ?>" />
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'link' ); ?>">default image link (1000x90) or (1000x250)</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'link' ); ?>"
+			       name="<?php echo $this->get_field_name( 'link' ); ?>" type="text" value="<?php echo $link; ?>" />
 		</p>
 		<?php
 	}

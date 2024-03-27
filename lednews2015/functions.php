@@ -4,6 +4,40 @@
 require_once __DIR__ . '/deco-framework/load.php';
 
 
+
+
+
+function wpse120407_pre_get_posts( $query ) {
+
+    if ( is_home() && $query->is_main_query() ) {
+
+        $query->set( 'category__not_in', array( 36 ) );
+        //$map_post = get_field('led-blockmap-fix', 'option' , false);
+    }
+}
+//add_action( 'pre_get_posts', 'wpse120407_pre_get_posts' );
+
+
+
+function short_title_widget($after = null, $length, $title) {
+	$mytitle = $title;
+	//$mytitle = wp_trim_words( get_the_title(), 6 , ''); 
+	$size = strlen($mytitle);
+	if($size>$length) {
+		$mytitle = mb_substr($mytitle, 0, $length);
+		$mytitle = explode(' ',$mytitle);
+		array_pop($mytitle);
+		// $mytitle = implode(" ",$mytitle).$after;
+		$mytitle = implode(" ",$mytitle);
+		$mytitle = wp_trim_words( $mytitle, 6);
+		$mytitle = $mytitle.$after;
+	} 
+	// else {
+	// 	 $mytitle = wp_trim_words( $mytitle, 6 );
+	// }
+	return $mytitle;
+}
+
 function short_title($after = null, $length) {
 	$mytitle = get_the_title();
 	//$mytitle = wp_trim_words( get_the_title(), 6 , ''); 
@@ -143,6 +177,9 @@ function deco_get_post_counts( $post_id = 0 ) {
 	
 		// Loads our main stylesheet.
 		wp_enqueue_style( 'codium_now-style', get_stylesheet_uri(), array(), '2014-11-22' );
+
+		
+
 	    wp_enqueue_script( 'codium_now-script', get_template_directory_uri() . '/js/menu.js', array( 'jquery' ), '20140630', true );
 	
 		wp_enqueue_style( 'slick-css', get_template_directory_uri() . '/js/slick.css' );
@@ -150,13 +187,76 @@ function deco_get_post_counts( $post_id = 0 ) {
 		 wp_enqueue_script( 'slick-min-js', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ), '20140630', true );
 
 		wp_enqueue_script( 'orphus', get_template_directory_uri() .'/js/orphus.js', array(), false, true );
+
+		wp_enqueue_style( 'bootstrap-colorpicke-css', get_template_directory_uri() . '/js/colpick.css' );
+		wp_enqueue_script( 'bootstrap-colorpicker', get_template_directory_uri() .'/js/colpick.js');
+
+		//wp_enqueue_script( 'postscribe', get_template_directory_uri() .'/js/postscribe.min.js');
+
+		
+
 		
 		
 	}
 	endif; // codium_now_scripts_styles
 	add_action( 'wp_enqueue_scripts', 'codium_now_scripts_styles' );
 	
-	
+function led_brending() {
+	//$color = get_theme_mod( 'my-custom-color' ); // #FF0000
+	// $custom_css = "
+	// 	.mycolor{
+	// 		background: {$color};
+	// 	}";
+
+	$led_brend_on = get_field('led_brend_on', 'option');
+	$led_brend_img= get_field('led_brend_img', 'option');
+	$led_brend_count_home = get_field('led_brend_count_home', 'option');
+	$led_brend_count_page = get_field('led_brend_count_page', 'option');
+	$led_brend_color = get_field('led_brend_color', 'option');
+
+	if ($led_brend_on) 	{
+
+		$custom_css = "
+			.customize-support{
+				background: ".$led_brend_color." url(".$led_brend_img.") 50% 62px no-repeat;
+			}
+			.ledbanner {
+			    height: 325px;
+			    visibility: hidden;
+			}
+			#wrapper, #wrapper2 {
+			    background-color: rgb(255, 255, 255);
+			}
+			#primary > .side-banner{
+				padding-top: 30px;
+			}
+			.slick-slider {
+			    margin-bottom: 0px !important; 
+			}
+			.wrapper-down {
+				margin-top: 0px !important;
+			    margin-bottom: 0px !important;
+				padding-bottom: 20px;
+			}
+			.sidebar-down {
+				padding-top: 30px;
+			}
+			.led-gallery.container-head {
+				max-width: 100% !important;
+			}";
+
+		wp_add_inline_style( 'codium_now-style', $custom_css );
+	} //end if
+}
+add_action( 'wp_enqueue_scripts', 'led_brending' );	
+
+function led_brending_add_link() {
+	$led_brend_on = get_field('led_brend_on', 'option');
+	$led_brend_link = get_field('led_brend_link', 'option');
+	if ($led_brend_on) 	{
+		echo '<a href="'.$led_brend_link.'" id="bglink" target="_blank">brending link</a>';
+	}
+}
 
 	
 	

@@ -90,7 +90,10 @@ if ( ! function_exists( 'ajax_pagination' ) ) {
 			'posts_per_page' => $posts_per_page,
 			'paged'          => $next_page,
 			'post_status'    => 'publish'
+			
 		);
+
+		// $args['category__not_in'] = array( 36 );
 
 		if ( is_array( $exclude_post ) ) {
 			$args['post__not_in'] = $exclude_post;
@@ -170,6 +173,9 @@ if ( ! function_exists( 'ajax_pagination' ) ) {
 		);
 		//$response['test'] = 'ok!';
 		//}
+
+		// led
+		//$args['category__not_in'] = array( 36 );
 
 		if ( $search_string <> '' ) {
 			$args['s'] = $search_string;
