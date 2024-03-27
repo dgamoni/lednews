@@ -41,11 +41,11 @@ function lasttopics_popular($atts)
 
 
 	// $ipb_mysqlquery = mysql_query("SELECT tid,title,posts,starter_id,start_date,last_poster_id,last_post,starter_name,last_poster_name,views,title_seo FROM ".$dbprifix."topics ORDER BY last_post DESC LIMIT $limit");
-	$ipb_mysqlquery = mysql_query("SELECT tid,title,posts,starter_id,start_date,last_poster_id,last_post,starter_name,last_poster_name,views,title_seo FROM ".$dbprifix."topics ORDER BY views DESC LIMIT $limit");
+	$ipb_mysqlquery = mysql_query("SELECT tid,title,posts,starter_id,start_date,last_poster_id,last_post,starter_name,last_poster_name,views,title_seo FROM ".$dbprifix."topics ORDER BY views DESC LIMIT $this_count");
 	
 	setlocale(LC_ALL, 'ru_RU.UTF-8');
 		
-		echo '<ul>';
+		echo '<ul class="forum-widget-led">';
 
 			while($row = mysql_fetch_array($ipb_mysqlquery)) {
 				$monthname_ru =  strftime('%m', $row['start_date']) ;
@@ -57,7 +57,7 @@ function lasttopics_popular($atts)
 				$ipb_starter_name = $row['starter_name'];
 				$ipb_date = strftime('%d', $row['start_date']) .' '.$monthname_ru.' '.strftime('в %g:%M', $row['start_date']);
 				if ($atts['views'] == 1) { $ipb_views_on = '('.$ipb_views.')'; }
-
+				echo '<li>';
 				  echo '<h4 class="entry-title">'. $ipb_title .' '.$ipb_views_on.'</h4>
 				  		<div class="entry-meta">
 				        	<span class="entry-date"><abbr class="published">'.$ipb_date.'</abbr></span>
@@ -65,7 +65,7 @@ function lasttopics_popular($atts)
 							<span class="meta-autor">'.$ipb_starter_name.'</span>
 
 				        </div>';
-
+				echo '</li>';
 			} //end while
 		echo '</ul>';
 
@@ -100,11 +100,11 @@ function lasttopics_comments($atts)
 
 
 	// $ipb_mysqlquery = mysql_query("SELECT tid,title,posts,starter_id,start_date,last_poster_id,last_post,starter_name,last_poster_name,views,title_seo FROM ".$dbprifix."topics ORDER BY last_post DESC LIMIT $limit");
-	$ipb_mysqlquery = mysql_query("SELECT tid,title,posts,starter_id,start_date,last_poster_id,last_post,starter_name,last_poster_name,views,title_seo FROM ".$dbprifix."topics ORDER BY posts DESC LIMIT $limit");
+	$ipb_mysqlquery = mysql_query("SELECT tid,title,posts,starter_id,start_date,last_poster_id,last_post,starter_name,last_poster_name,views,title_seo FROM ".$dbprifix."topics ORDER BY posts DESC LIMIT $this_count");
 	
 	setlocale(LC_ALL, 'ru_RU.UTF-8');
 		
-		echo '<ul>';
+		echo '<ul class="forum-widget-led">';
 
 			while($row = mysql_fetch_array($ipb_mysqlquery)) {
 				$monthname_ru =  strftime('%m', $row['start_date']) ;
@@ -116,7 +116,7 @@ function lasttopics_comments($atts)
 				$ipb_starter_name = $row['starter_name'];
 				$ipb_date = strftime('%d', $row['start_date']) .' '.$monthname_ru.' '.strftime('в %g:%M', $row['start_date']);
 				if ($atts['comments'] == 1) { $ipb_comments_on = '('.$ipb_posts.')'; }
-
+				echo '<li>';
 				  echo '<h4 class="entry-title">'. $ipb_title .' '.$ipb_comments_on.'</h4>
 						<div class="entry-meta">
 				        	<span class="entry-date"><abbr class="published">'.$ipb_date.'</abbr></span>
@@ -124,7 +124,7 @@ function lasttopics_comments($atts)
 							<span class="meta-autor">'.$ipb_starter_name.'</span>
 							
 				        </div>';
-
+				echo '</li>';
 			} //end while
 		echo '</ul>';
 
@@ -159,7 +159,7 @@ function lasttopics_led($atts)
 
 		 //$ipb_mysqlquery = mysql_query("SELECT tid,title,posts,starter_id,start_date,last_poster_id,last_post,starter_name,last_poster_name,views,title_seo FROM ".$dbprifix."topics ORDER BY last_post DESC LIMIT $limit");
 	       $ipb_mysqlquery = mysql_query(
-	       	"SELECT m.id,m.name,p.forum_id,p.tid,p.title,p.posts,p.starter_id,p.start_date,p.last_poster_id,p.last_post,p.starter_name,p.last_poster_name,p.views,p.title_seo
+	       	"SELECT m.name_seo,m.id,m.name,p.forum_id,p.tid,p.title,p.posts,p.starter_id,p.start_date,p.last_poster_id,p.last_post,p.starter_name,p.last_poster_name,p.views,p.title_seo
 	       	 FROM topics p
 	       	 LEFT JOIN forums m
 	       	 ON ( m.id = p.forum_id )
@@ -172,29 +172,30 @@ function lasttopics_led($atts)
 
 		setlocale(LC_ALL, 'ru_RU.UTF-8');
 		
-		echo '<ul>';
+		echo '<ul class="forum-widget-led lasttopics_led">';
 			 
 			while($row = mysql_fetch_array($ipb_mysqlquery)) {
 				//echo $atts['count'];
 			 	$ipb_cat = $row['name'];
 				$monthname_ru =  strftime('%m', $row['start_date']) ;
 				$monthname_ru = month_full_name_ru_($monthname_ru);
+				$ipb_title_cat = "<a class=\"titlelinks\" href=\"".$ipburl."/forum/".$row['id']."-".$row['name_seo']."\" target=\"_blank\" >".$row['name']."</a>";
 				$ipb_title = "<a class=\"titlelinks\" href=\"".$ipburl."/index.php?showtopic=".$row['tid']."\" target=\"_blank\" >".$row['title']."</a>";
 				$ipb_views = $row['views'];
 				$ipb_posts = $row['posts'];
 				//$ipb_last_poster_name = $row['last_poster_name'];
 				$ipb_starter_name = $row['starter_name'];
 				$ipb_date = strftime('%d', $row['start_date']) .' '.$monthname_ru.' '.strftime('в %g:%M', $row['start_date']);
-				
-				  echo '<span class="entry-cat">'.$ipb_cat.'</span>
-				  		<h4 class="entry-title">'. $ipb_title .'</h4>
+				echo '<li>';
+				  echo '<span class="entry-cat">'.$ipb_title_cat.'</span>
+				  		<h3 class="entry-title">'. $ipb_title .'</h3>
 						<div class="entry-meta">
 				        	<span class="entry-date"><abbr class="published">'.$ipb_date.'</abbr></span>
 							<span class="meta-sep">&#149;</span>
 							<span class="meta-autor">'.$ipb_starter_name.'</span>
 							
 				        </div>';
-
+				echo '</li>';
 			} //end while
 		echo '</ul>';
 
@@ -238,8 +239,8 @@ function lasttopics_statistic($atts)
 
 		setlocale(LC_ALL, 'ru_RU.UTF-8');
 		
-		echo '<ul>';
-			 echo '<h2>Статистика</h2>';
+		echo '<ul class="forum-widget-led lasttopics_statistic">';
+			 //echo '<h2>Статистика</h2>';
 
 			while($row = mysql_fetch_array($ipb_mysqlquery)) {
 				//echo $atts['count'];
@@ -250,17 +251,19 @@ function lasttopics_statistic($atts)
 				$ipb_posts = $row['posts'];
 				
 				
-
-				  echo '<h4 class="entry-title">'.$ipb_title.'</h4>
+				echo '<li>';
+				  echo '<h5 class="entry-title">'.$ipb_title.'</h5>
 				  		<div class="entry-meta">
 				        	<span class="entry-date"><abbr class="published">тем </abbr></span><span class="meta-autor">'.$ipb_topics.'</span>
 							<span class="meta-sep">&#149;</span>
 							<span class="meta-autor">'.$ipb_posts.'</span><span class="entry-date"> ответов</span>
 							
 				        </div>';
-
+				echo '</li>';
 			} //end while
 		echo '</ul>';
+
+		// echo '<a class="led-button" href="http://lednews.lighting/">Перейти на форум</a>';
 
 
 	}
