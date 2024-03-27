@@ -95,10 +95,19 @@ if ( ! function_exists( 'ajax_pagination' ) ) {
 
 		// $args['category__not_in'] = array( 36 );
 
-		if ( is_array( $exclude_post ) ) {
-			$args['post__not_in'] = $exclude_post;
-		}
+		// if ( is_array( $exclude_post ) ) {
+		// 	$args['post__not_in'] = $exclude_post;
+		// }
 
+		// led
+		// $map_post = get_field('led-blockmap-fix', 'option' , false);
+		// if ($map_post) {
+		// 	$args['post__not_in'] = $map_post;
+		// } else {
+		// 	$args['post__not_in'] = get_map_post();
+		// }
+		// var_dump($map_post);
+		// var_dump(get_map_post());
 
 		$the_query = new WP_Query( $args );
 
@@ -174,8 +183,19 @@ if ( ! function_exists( 'ajax_pagination' ) ) {
 		//$response['test'] = 'ok!';
 		//}
 
-		// led
-		//$args['category__not_in'] = array( 36 );
+		// ledpost no in map
+		// $map_post = get_field('led-blockmap-fix', 'option' , false);
+		// if ($map_post) {
+		// 	$args['post__not_in'] = $map_post;
+		// } else {
+		// 	$args['post__not_in'] = get_map_post_ajax();
+		// }
+		// var_dump($map_post);
+		// var_dump(get_map_post());
+
+
+
+		$args['category__not_in'] = array( 36 );
 
 		if ( $search_string <> '' ) {
 			$args['s'] = $search_string;
@@ -193,9 +213,11 @@ if ( ! function_exists( 'ajax_pagination' ) ) {
 		}
 
 
-		if ( is_array( $excluded ) ) {
-			$args['post__not_in'] = $excluded;
-		}
+		// if ( is_array( $excluded ) ) {
+		// 	$args['post__not_in'] = $excluded;
+		// }
+
+		//echo get_map_post_ajax();
 
 		$the_query = new WP_Query( $args );
 		ob_start();
@@ -476,3 +498,43 @@ if ( ! function_exists( 'ajax_pagination' ) ) {
 		}
 	}
 
+function get_map_post_ajax() {
+	    $argsss = array(
+        //'post__in'     => $map_post,
+        //'post__not_in' => $map_post,
+        'category_name'    => 'map',
+        'posts_per_page' => 1,
+        'post_status'   => 'publish',
+        'category'    => '36',
+        'order'               => 'DESC',
+        'orderby'             => 'date',
+        //'orderby' => 'rand',
+        //'ignore_sticky_posts' => false
+        'fields' => 'ids'
+    );
+
+	$map_query = new WP_Query( $argsss );
+	wp_reset_query();
+	$map_last = $map_query->posts;
+
+	    $argsss2 = array(
+	        //'post__in'     => $map_post,
+	        'post__not_in' => $map_last,
+	        'category_name'    => 'map',
+	        'posts_per_page' => 1,
+	        'post_status'   => 'publish',
+	        'category'    => '36',
+	        'order'               => 'DESC',
+	        //'orderby'             => 'date',
+	        'orderby' => 'rand',
+	        //'ignore_sticky_posts' => false
+	        'fields' => 'ids'
+	    );
+
+	$map_query2 = new WP_Query( $argsss2 );
+	wp_reset_query();
+	$map_rand = $map_query2->posts;
+	$map_def = array_merge($map_rand, $map_last);
+	
+	return $map_def;
+}
