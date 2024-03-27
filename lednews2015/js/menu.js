@@ -310,6 +310,42 @@ $('.change-informer-button').change(function(event) {
     $('#xmp-informer-button').html('<xmp><!-- custom код кнопки lednews.ru --><script type="text/javascript"> var widget_embed = "button";var size_button = "'+button_size+'"; var button_color="'+button_color+'";</script><script src="http://test.lednews.ru/widget/wp-widget-button.js" type="text/javascript"></script><div id="embed-widget-container2"></div><!-- end код кнопки lednews.ru --></xmp>');
     
 });
+
+
+
+ 
+
+
+// var iframe = top.frames[name].document;
+// var css = '' +
+//           '<style type="text/css">' +
+//           '.inf-thumbnail{display:none}' +
+//           '</style>';
+// iframe.open();
+// iframe.write(css);
+// iframe.close();
+
+
+
+
+
+
+// adaptiv informer iframe
+var windowsize = $(window).width();
+
+$(window).resize(function() {
+  windowsize = $(window).width();
+  if (windowsize < 632) {
+ 
+    //console.log(windowsize);
+    // $('#led_informer_iframe').contents().find('li').css({
+    //     background-color: 'antiquewhite'
+    // });
+
+  }
+});
+
+
 // $('.colpick_submit').click(function(event) {
 //      var button_size = $('.button-size').val();
 //       var button_color = $('.button-color-val').val();
@@ -343,3 +379,4 @@ $('.change-informer-button').change(function(event) {
 
  
  
+

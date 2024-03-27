@@ -10,7 +10,7 @@ get_header();
 <?php the_post(); ?>
 
 <div id="container">
-	<div id="content" class="nine columns">
+	<div id="content-single-title" class="nine columns">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
         <?php
 			$categories = get_the_category($post->ID);
@@ -61,7 +61,7 @@ get_header();
 						<!-- <div class="hr"></div> -->
 
 						<div class="led-social">
-							<div data-background-alpha="0.0" data-buttons-color="#ffffff" data-counter-background-color="#ffffff" data-share-counter-size="12" data-top-button="false" data-share-counter-type="separate" data-share-style="10" data-mode="share" data-like-text-enable="false" data-mobile-view="true" data-icon-color="#ffffff" data-orientation="horizontal" data-text-color="#ffffff" data-share-shape="rectangle" data-sn-ids="fb.vk.tw.gp.ps." data-share-size="30" data-background-color="#ffffff" data-preview-mobile="false" data-mobile-sn-ids="fb.vk.tw.wh.ok.gp." data-pid="1349111" data-counter-background-alpha="1.0" data-following-enable="false" data-exclude-show-more="true" data-selection-enable="false" class="uptolike-buttons" ></div>
+							<div data-background-alpha="0.0" data-buttons-color="#ffffff" data-counter-background-color="#ffffff" data-share-counter-size="12" data-top-button="false" data-share-counter-type="separate" data-share-style="10" data-mode="share" data-like-text-enable="false" data-mobile-view="true" data-icon-color="#ffffff" data-orientation="horizontal" data-text-color="#ffffff" data-share-shape="rectangle" data-sn-ids="fb.vk.tw.gp.ps." data-share-size="30" data-background-color="#ffffff" data-preview-mobile="false" data-mobile-sn-ids="fb.vk.tw.wh.ok.gp." data-pid="1349111" data-counter-background-alpha="1.0" data-following-enable="false" data-exclude-show-more="true" data-selection-enable="false" class="uptolike-buttons uptolike-buttons-single" ></div>
 							
 							<div class="counter"><?php echo $led_news_tid_count; ?></div>
 							<div class="forum_button">

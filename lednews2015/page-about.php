@@ -45,6 +45,8 @@ get_header();
 							<p><?php echo $led_about_text2; ?></p>
 						</div>
 						
+						<div class="clear"></div>
+						
 						<h3 class="center">Профессиональные журналисты</h3>
 						
 						<?php
