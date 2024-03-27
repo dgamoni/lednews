@@ -1,0 +1,117 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ipb last topics\n"
+"POT-Creation-Date: 2013-01-06 19:56+0330\n"
+"PO-Revision-Date: 2013-01-06 21:33+0330\n"
+"Last-Translator: mahdi <mahdi@progpars.com>\n"
+"Language-Team: iwordpress.ir <mahdi@progpars.com>\n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_en;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: D:\\Project\\wordpress.org\\ipb-last-topics\\trunk\n"
+
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/ipblasttopics.php:25
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/ipblasttopics.php:26
+msgid "Error communicating with the database"
+msgstr "خطا در برقراری ارتباط با پایگاه داده"
+
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/ipblasttopics.php:37
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/ipblasttopics.php:78
+msgid "Recent Forum Posts"
+msgstr "آخرین ارسال های انجمن"
+
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/ipblasttopics.php:43
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/ipblasttopics.php:87
+msgid "Title Latest Posts Forum"
+msgstr "عنوان آخرین ارسال های انجمن"
+
+# new
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/ipblasttopics.php:44
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/ipblasttopics.php:86
+msgid "Reply"
+msgstr "پاسخ"
+
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/ipblasttopics.php:45
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/ipblasttopics.php:85
+msgid "Visit"
+msgstr "بازدید"
+
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/ipblasttopics.php:46
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/ipblasttopics.php:84
+msgid "Last Post"
+msgstr "آخرین ارسال"
+
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/ipblasttopics.php:123
+msgid " Latest Posts Forum Ipb"
+msgstr "آخرین ارسال های انجمن ساز آی پی بی"
+
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/ipblasttopics.php:123
+msgid "IPB"
+msgstr "آی پی بی"
+
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/panel_ipblasttopics.php:26
+msgid "Settings saved"
+msgstr "ذخیره تغییرات"
+
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/panel_ipblasttopics.php:33
+msgid "Settings"
+msgstr "تنظیمات"
+
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/panel_ipblasttopics.php:39
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/panel_ipblasttopics.php:45
+msgid "forum Address"
+msgstr "آدرس انجمن"
+
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/panel_ipblasttopics.php:54
+msgid "community information database"
+msgstr "اطلاعات دیتابیس انجمن"
+
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/panel_ipblasttopics.php:60
+msgid "server name"
+msgstr "نام سرور"
+
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/panel_ipblasttopics.php:69
+msgid "database name"
+msgstr "نام دیتابیس"
+
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/panel_ipblasttopics.php:78
+msgid "database username"
+msgstr "نام کاربری دیتابیس"
+
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/panel_ipblasttopics.php:87
+msgid "database password"
+msgstr "کلمه عبور دیتابیس"
+
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/panel_ipblasttopics.php:96
+msgid "prefix tables"
+msgstr "پیشوند جداول"
+
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/panel_ipblasttopics.php:105
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/panel_ipblasttopics.php:111
+msgid "display topics"
+msgstr "تعداد نمایش"
+
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/panel_ipblasttopics.php:115
+msgid "item"
+msgstr "مورد"
+
+#: D:\Project\wordpress.org\ipb-last-topics\trunk/panel_ipblasttopics.php:121
+msgid "save"
+msgstr "ذخیره"
+
+#~ msgid "Database prifix"
+#~ msgstr "پیشوند جداول"
+
+#~ msgid "Item"
+#~ msgstr "مورد"
+
+#~ msgid "Save"
+#~ msgstr "ذخیره"
+
+#~ msgid "Not Found!"
+#~ msgstr "نیست"

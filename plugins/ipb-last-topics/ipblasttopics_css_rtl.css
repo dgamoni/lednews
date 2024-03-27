@@ -1,0 +1,112 @@
+.Clear {
+    clear: both;
+}
+img.titleicon{
+    box-shadow: none;
+    float: right;
+    margin-top: 3px;
+    padding-left: 4px;
+}
+.titlelinks {
+    color: #5A5A5A;
+    font-weight: bold;
+	text-decoration:none;
+	font-weight:bold;
+}
+.ForumLastTopic {
+    border: 1px solid #D8D8D8;
+    float: left;
+    font-family: Tahoma;
+    font-size: 12px;
+    width: 620px;
+}
+.ForumLastTopic .Head {
+    background: url("images/bg-head.png") repeat-x scroll 0 0 #EEEEEE;
+    border-bottom: 1px solid #BFBFBF;
+    height: 28px;
+}
+.ForumLastTopic #MTFloader img {
+    float: right;
+    height: 16px;
+    margin-right: 10px;
+    margin-top: 5px;
+    width: 16px;
+}
+.ForumLastTopic .Forumsbox {
+    color: #959595;
+    margin: 0 auto;
+}
+.ForumLastTopic .Forumsbox .col1 {
+    border-bottom: 1px solid #EAEAEA;
+    border-left: 1px solid #EAEAEA;
+    height: 21px;
+    padding-right: 5px;
+    width: 421px;
+}
+.ForumLastTopic .Forumsbox .col2 {
+    border-bottom: 1px solid #EAEAEA;
+    border-left: 1px solid #EAEAEA;
+    height: 21px;
+    text-align: center;
+    width: 57px;
+	color:#5A5A5A;
+}
+.ForumLastTopic .Forumsbox .col3 {
+    border-bottom: 1px solid #EAEAEA;
+    border-left: 1px solid #EAEAEA;
+    height: 21px;
+    text-align: center;
+    width: 57px;
+	color: #5A5A5A;
+}
+.ForumLastTopic .Forumsbox .col4 {
+    border-bottom: 1px solid #EAEAEA;
+    border-left: 1px solid #EAEAEA;
+    height: 21px;
+    text-align: center;
+    width: 108px;
+	color: #5A5A5A;
+}
+.ForumLastTopic .Head span.col1 {
+    border-left: 1px solid #CACACA;
+    color: #444444;
+    display: block;
+    float: right;
+    line-height: 28px;
+    text-align: center;
+    width: 388px;
+	color: #727272;
+	text-shadow:1px 1px #fff;
+}
+.ForumLastTopic .Head span.col2 {
+    border-left: 1px solid #CACACA;
+    color: #444444;
+    display: block;
+    float: right;
+    line-height: 28px;
+    text-align: center;
+    width: 58px;
+	color: #727272;
+	text-shadow:1px 1px #fff;
+}
+.ForumLastTopic .Head span.col3 {
+    border-left: 1px solid #CACACA;
+    color: #444444;
+    display: block;
+    float: right;
+    line-height: 28px;
+    text-align: center;
+    width: 58px;
+	color: #727272;
+	text-shadow:1px 1px #fff;
+}
+.ForumLastTopic .Head span.col4 {
+    color: #444444;
+    display: block;
+    float: right;
+    line-height: 28px;
+    text-align: center;
+    width: 100px;
+	color: #727272;
+	text-shadow:1px 1px #fff;
+}
