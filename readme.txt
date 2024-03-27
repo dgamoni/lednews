@@ -1,0 +1,17 @@
+Wordpress theme + framework - "led news"
+- Use my framework
+- Integration and synchronization forum IPB
+- Custom post type, taxonomy, custom fields
+- informer widget
+- Integration google api, instagram
+- functions ratings and visits posts
+- Ajax load more, search, filter post and more
+- Advanced search
+- social login
+- Custom widget in forum IPB
+- integration automatic synchronization other wp blog
+- Walker menu
+- shortcode
+- Theme settings
+- Page template
+- And much more

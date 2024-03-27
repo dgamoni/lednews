@@ -14,6 +14,7 @@ load_plugin_textdomain('ipb', false, 'wp-content/plugins/ipb-last-topics/langs')
 //require ipb_config.php
 if(file_exists(MYPLUGINNAME_PATH .'/ipb_config.php')){
 	require(MYPLUGINNAME_PATH .'/ipb_config.php');
+	//require(MYPLUGINNAME_PATH .'/BFI_Thumb.php');
 }
 
 // order by views
@@ -269,6 +270,51 @@ function lasttopics_statistic($atts)
 	}
 add_shortcode('lasttopics_statistic','lasttopics_statistic');
 
+//last gallery
+// 
+function lasttopics_gallery($atts)
+{
+	//global variable
+	global $mysql_connect,$wpdb,$ipb_mysqlquery,$row,$plugin_name,$ipburl,$dbhost,$dbname,$dbuser,$dbpass,$dbprifix,$limit;
+	
+	//cout
+	 extract( shortcode_atts( array(
+		  'count' => '5'
+		  //'comments' => '0'
+	 ), $atts ) );
+
+	 $this_count = $atts['count'];
+
+	//database connect and query
+	$mysql_connect = mysql_connect($dbhost,$dbuser,$dbpass) or die("" . __('Error communicating with the database', 'ipb') . "");
+	mysql_select_db($dbname) or die("" . __('Error communicating with the database', 'ipb') . "");
+	mysql_query("SET NAMES 'latin1_swedish_ci'", $mysql_connect); 
+	mysql_query("SET character_set_connection = 'latin1_swedish_ci'", $mysql_connect);
+
+//html 
+	$currentlang = get_bloginfo('language');
+
+
+	// $ipb_mysqlquery = mysql_query("SELECT tid,title,posts,starter_id,start_date,last_poster_id,last_post,starter_name,last_poster_name,views,title_seo FROM ".$dbprifix."topics ORDER BY last_post DESC LIMIT $limit");
+	$ipb_mysqlquery = mysql_query("SELECT image_directory,image_masked_file_name,image_date FROM ".$dbprifix."gallery_images ORDER BY image_date DESC LIMIT $this_count");
+	
+	setlocale(LC_ALL, 'ru_RU.UTF-8');
+		
+		//echo '<div id="lasttopics_gallery">';
+			while($row = mysql_fetch_array($ipb_mysqlquery)) {
+				$params = array( 'height' => 330 );
+	        	$image_url = $ipburl."/uploads/".$row['image_directory']."/".$row['image_masked_file_name']; 
+				// echo "<img height: '300' src='" . bfi_thumb( $image_url, $params ) . "'/>";
+				echo "<img src='" .$image_url . "'/>";
+			} //end while
+
+		//echo '</div>';
+
+
+	}
+
+
+add_shortcode('lasttopics_gallery','lasttopics_gallery');
 
 // return current post link and count comments
 function lasttopics_single($atts)
