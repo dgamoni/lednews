@@ -1,0 +1,105 @@
+/*  Style Login page */
+body {
+	background: url(../img/post_1000_600_not_logo.jpg) top no-repeat !important;
+    background-size: 100% 100% !important;
+	/*background: #2b2d30 !important;*/
+}
+
+body.login {
+	background: #ffffff;
+}
+
+body.login div#login {
+	padding: 2% 0 0;
+}
+
+body.login div#login h1 a {
+	background: url(../img/logo.svg) top center no-repeat;
+	width:      100%;
+	/*height: 100%;*/
+	/*overflow: hidden;*/
+	/* position: relative; */
+	/* top: -90px;
+	right: 0%; */
+	/*background-size: 329px auto;*/
+	/* margin-bottom: -321px; */
+}
+body.login div#login h1 a:hover {
+    opacity: 0.8 !important;
+}
+.wp-core-ui .button-primary {
+    background: #046736 none repeat scroll 0 0 !important;
+}
+.wp-core-ui .button-primary:hover {
+    opacity: 0.9 !important;
+}
+.wp-core-ui .button-primary:focus {
+    box-shadow: 0 1px 0 rgba(4, 103, 54, 0.6) inset, 0 0 0 1px #046736, 0 0 2px 1px rgba(30, 140, 190, 0.8) !important;
+}
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #046736 !important;
+    box-shadow: 0 0 2px rgba(4, 103, 54, 0.8) !important;
+}
+.login form {
+    padding: 16px 24px !important;
+}
+#backtoblog {
+	display: none;
+}
+
+.login#nav {
+	margin-left: 0px;
+}
+
+#nav, #nav a {
+	display:     none;
+	text-shadow: none;
+	text-align:  center;
+}
+
+#wp-submit {
+
+	float:                 right;
+	margin:                8px 0;
+	margin-left:           20px;
+	-webkit-transition:    opacity 0.3s;
+	-moz-transition:       opacity 0.3s;
+	-o-transition:         opacity 0.3s;
+	transition:            opacity 0.3s;
+
+	border:                0;
+
+
+	color:                 #ffffff;
+	/*padding:               12px 22px;*/
+	font-size:             16px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius:    2px;
+	-ms-border-radius:     2px;
+	-o-border-radius:      2px;
+	border-radius:         2px;
+}
+
+#user_login,
+#user_pass {
+	color:              #212121;
+	font-family:        "Arimo", sans-serif;
+	font-size:          16px;
+	border:             1px solid #ececec;
+	padding:            15px 16px 15px 16px;
+	-webkit-transition: all 0.3s;
+	-moz-transition:    all 0.3s;
+	-o-transition:      all 0.3s;
+	transition:         all 0.3s;
+	display:            inline-block;
+	vertical-align:     middle;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;
+}
+
+#nav a {
+	color:       coral !important;
+	text-shadow: 1px 1px 1px #000;
+	font-size:   18px;
+}

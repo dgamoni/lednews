@@ -1,0 +1,461 @@
+.modal {
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 999999;
+    left: 0;
+    position: fixed;
+    display:none;
+}
+.modal .soc img{display:none;}
+.modal .soc{
+    padding:0 20px;
+    margin: 20px 0 10px!important;
+}
+.modal .soc a{
+    width: 114px;
+    height: 36px;
+    margin-right: 4px;
+    background-size: 114px 36px!important;
+    padding: 0!important;
+}
+.modal .soc a:first-child{
+    background: url('../img/soc.fb.svg') no-repeat;
+}
+.modal .soc a:nth-child(2){
+    background: url('../img/soc.go.svg') no-repeat;
+}
+.modal .soc a:last-child{
+    background: url('../img/soc.vk.svg') no-repeat;
+    margin-right:0;
+}
+.modal .soc a:hover{
+    opacity:0.8;
+}
+.modal .animated {
+    width: 400px;
+}
+.modal .main-box {
+    top: -100%;
+    opacity: 0;
+    position: fixed;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    width: 400px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: #fff;
+    border-radius:5px;
+    opacity: 1;
+    padding: 30px 0 42px;
+}
+.modal .main-box .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+}
+.modal .separator{
+    text-align: center;
+    position: relative;
+    color: #c2c2c2;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 14px;
+    overflow: hidden;
+    margin: 22px 20px 22px;
+}
+.modal .separator::before,
+.modal .separator::after{
+    display: block;
+    content: '';
+    width: 50%;
+    height: 1px;
+    background-color: #e5e5e5;
+    position: absolute;
+    top: 7px;
+}
+.modal .separator::before{left:-22px;}
+.modal .separator::after{right:-22px;}
+.modal h3 {
+    padding: 4px 0px 4px;
+    font-size: 20px;
+    text-align: center;
+    padding-left: 21px;
+    text-transform: uppercase;
+}
+.modal .form-control{
+    color:rgb(169, 169, 169);
+    background-color: #f0f0f0;
+    margin:0!important;
+
+}
+.modal .form-control, .modal .contact-button {
+    width: 340px;
+    padding: 10px 8px;
+    outline: #000;
+    color: #000;
+    margin: 18px auto;
+    display: block;
+    cursor: pointer;
+    border:1px solid #dbdbdb;
+}
+.modal form{margin:0 20px}
+.modal .login-right{display:none;}
+.modal .login-right,
+.modal .login-left{
+    position: absolute;top:0;margin: 0 auto;
+    width: 100%;
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+}
+.modal .to-reg,
+.modal .to-login,
+.modal .remember-pass{
+    display: block;
+    margin: 0 auto;
+    width: auto;
+}
+
+.login-path-modal{height:180px;position: relative;}
+.modal i {
+    color: #fff;
+    font-size: 20px;
+}
+.modal i.fa-close {
+    color: #007DCC;
+}
+
+.modal i.fa-close:hover {
+    -webkit-animation: rotate 0.3s linear 1;
+    -o-animation: rotate 0.3s linear 1;
+    animation: rotate 0.3s linear 1;
+}
+.modal i.fa-close.back {
+    -webkit-animation: rotateback 0.3s linear 1;
+    -o-animation: rotateback 0.3s linear 1;
+    animation: rotateback 0.3s linear 1;
+}
+.modal a {
+    padding: 10px;
+    width: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.modal li {
+    display: inline-block;
+    margin-right: 5px;
+}
+.modal .modal-socials {
+    padding: 10px 0 0 20px;
+}
+.modal .contact-button {
+    overflow: hidden;
+    position: relative;
+    padding:0!important;
+    width: 100%;
+    background: #dd4536;
+    color: #fff;
+    font: 14px 'open sans','Arial', sans-serif;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    display:block;
+    border:0;
+}
+
+.modal .contact-button span {
+    display: block;
+    padding: 10px 20px;
+    background: #dd4536;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+.modal .contact-button::before {
+    content: attr(data-hover);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    color: #0f7c67;
+    -webkit-transition: background 0.3s;
+    -moz-transition:background 0.3s;
+    transition: background 0.3s;
+    -webkit-transform: translateX(-100%);
+    z-index: 999;
+    line-height: 37px;
+    background: #4D75A3;
+    color: #fff;
+}
+.modal .contact-button:hover span{
+    background: #d04435;
+}
+
+
+#modal-auth *{
+    font-weight: normal;
+}
+#modal-auth #user-name-log{
+    border-bottom: none;
+}
+
+#modal-auth label{
+    font-size: 14px;
+}
+#modal-auth label input[type='checkbox']{
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    margin-right: 4px;
+}
+
+#modal-auth .remember-pass{
+    padding: 0;
+}
+#modal-auth .main-box{
+    /*height: 335px;*/
+}
+
+#modal-auth .flipper{
+    width: 400px;
+    height: 375px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-left: -200px;
+    margin-top: -170px;
+}
+
+#modal-auth .main-box{
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    z-index: 1;
+    position: absolute;
+    top: 0 !important;
+    left: 0;
+    /*height: 335px;*/
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 0.6s;
+    -moz-transition: -moz-transform 0.6s;
+    -o-transition: -o-transform 0.6s;
+    transition: transform 0.6s;
+    -webkit-transform: perspective(800px) rotateY(0deg);
+    -moz-transform: perspective(800px) rotateY(0deg);
+    -ms-transform: perspective(800px) rotateY(0deg);
+    -o-transform: perspective(800px) rotateY(0deg);
+    transform: perspective(800px) rotateY(0deg);
+}
+
+#modal-auth .main-box.back{
+    -webkit-transform: perspective(800px) rotateY(180deg);
+    -moz-transform: perspective(800px) rotateY(180deg);
+    -ms-transform: perspective(800px) rotateY(180deg);
+    -o-transform: perspective(800px) rotateY(180deg);
+    transform: perspective(800px) rotateY(180deg);
+}
+
+#modal-auth .flipper.rotate .main-box{
+    -webkit-transform: perspective(800px) rotateY(-180deg);
+    -moz-transform: perspective(800px) rotateY(-180deg);
+    -ms-transform: perspective(800px) rotateY(-180deg);
+    -o-transform: perspective(800px) rotateY(-180deg);
+    transform: perspective(800px) rotateY(-180deg);
+}
+
+#modal-auth .flipper.rotate .main-box.back{
+    -webkit-transform: perspective(800px) rotateY(0deg);
+    -moz-transform: perspective(800px) rotateY(0deg) ;
+    -ms-transform: perspective(800px) rotateY(0deg);
+    -o-transform: perspective(800px) rotateY(0deg);
+    transform: perspective(800px) rotateY(0deg) ;
+}
+
+#modal-auth .main-box p{
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #929292;
+    text-align: center;
+}
+
+#modal-auth .main-box.back h3{
+    margin-bottom: 30px;
+}
+
+.wp-social-login-connect-with{
+    font-weight: normal;
+}
+
+.decomments-comment-section .wp-social-login-provider-list a span, #modal-auth .soc a:before{
+    display: block;
+    position: absolute;
+    font-family: arial, sans-serif !important;
+    font-size: 12px;
+    color: #ffffff;
+    top:50%;
+    -webkit-transform: translate(0,-50%);
+    -moz-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    transform:translate(0,-50%);
+    left: 50px;
+    line-height: 1;
+}
+#modal-auth .soc a{
+    position: relative;
+}
+#modal-auth .soc a:before{
+    left: 40px;
+}
+#modal-auth .soc a[data-provider-name^='Facebook']:before{
+    content:'Facebook';
+}
+#modal-auth .soc a[data-provider-name^='Google']:before{
+    content:'Google +';
+}
+#modal-auth .soc a[data-provider-name^='Vkontakte']:before{
+    content:'Vkontakte';
+}
+.loader-box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgba(255,255,255,.5);
+    display: none;
+
+}
+.loader-box .loader-inner{
+    position: absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform:translate(-50%,-50%);
+
+}
+
+.loader-box .loader-inner div{
+    border-radius: 100%;
+    margin: 2px;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    border: 2px solid #D34231;
+    border-bottom-color: transparent;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    -webkit-animation: rotate 0.75s 0s linear infinite;
+    animation: rotate 0.75s 0s linear infinite;
+}
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg); }
+
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg); }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg); }
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg) ; }
+
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg); }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg); }
+}
+@-moz-keyframes rotate {
+    0% {
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg); }
+
+    50% {
+        -moz-transform: rotate(180deg);
+        transform: rotate(180deg); }
+
+    100% {
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg) ; }
+}
+
+
+
+@media screen and (max-width: 390px) {
+
+    #modal-auth .flipper{
+        width: 100%;
+        left: 0;
+        margin-left: 0;
+    }
+    #modal-auth .main-box{
+        width: 100%;
+    }
+
+    .modal .form-control, .modal .contact-button{
+        width: 100%;
+        box-sizing:border-box;
+    }
+    .modal .soc a:first-child {
+        background: url('../img/soc.fb_min.svg') no-repeat;
+    }
+
+    .modal .soc a:nth-child(2) {
+        background: url('../img/soc.go_min.svg') no-repeat;
+    }
+
+    .modal .soc a:last-child {
+        background: url('../img/soc.vk_min.svg') no-repeat;
+    }
+    .modal .soc a {
+        width: 41px;
+        height: 50px;
+        margin-right: 4px;
+        background-size: 152px 50px!important;
+        padding: 0!important;
+    }
+    .modal .soc.soc.soc.soc a:before{
+        content: '';
+        display: none !important;
+    }
+    .modal .soc{
+        text-align: center;
+    }
+    .modal .contact-button{
+        font-size: 12px;
+    }
+}
