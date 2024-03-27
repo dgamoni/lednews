@@ -23,7 +23,7 @@
 
 		register_post_type( 'ledgallery', array(
 			'labels'          => $labels,
-			'public'          => true,
+			'public'          => false,
 			'show_ui'         => true,
 			'capability_type' => 'page',
 			'menu_icon'       => 'dashicons-images-alt2',
@@ -103,7 +103,7 @@ function register_ledslider_post_type() {
 
 		register_post_type( 'ledslider', array(
 			'labels'          => $labels,
-			'public'          => true,
+			'public'          => false,
 			'show_ui'         => true,
 			'capability_type' => 'page',
 			'menu_icon'       => 'dashicons-images-alt2',

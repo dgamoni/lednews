@@ -17,7 +17,7 @@ body.search-activated {
 .header-search-container a:hover{
     color: #263ce3 !important;
 }
-.header-search-container p {
+.header-search-container p , .header-search-container div {
     color: #666666 !important;
 }
 
@@ -197,7 +197,11 @@ button.dc_close {
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
-    color: #454545 !important;
+    /*dgamoni*/
+    /*color: #454545 !important;*/
+    color: #263ce3 !important;
+    margin-left: 14px;
+
     width: auto !important;
     transition:all .3s;
 }

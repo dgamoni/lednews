@@ -12,14 +12,17 @@ function deco_form_search_ajax() {
 
 		</h2>
 
+		<div class="al-center">
+        	<a class="btn-yellow header-search-all btn-cool-search hidden-xs hide informer-title" href="#">Все результаты</a>
+        </div>
+
 		<div class="header-search-results search-tiles-list">
 		</div>
 
-        <div class="al-center">
+<!--         <div class="al-center">
+        	<a class="btn-yellow header-search-all btn-cool-search hidden-xs hide" href="#">Все результаты</a>
+        </div> -->
 
-        <a class="btn-yellow header-search-all btn-cool-search hidden-xs hide"
-           href="#">Все результаты</a>
-        </div>
 	</div>
 	<?php
 

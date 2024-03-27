@@ -38,12 +38,17 @@ jQuery(document).ready(function ($) {
 				url    : location.origin + '/wp-admin/admin-ajax.php',
 				data   : {action: 'dc_ajax_search', term: term},
 				success: function (data, textStatus, xhr) {
-					console.log(data);
-					if (xhr.status == 204 || typeof data === 'undefined') {
+					
+					console.log(data.length);
+
+					
+					if (xhr.status == 204 || typeof data === 'undefined' || data.length === 0) {
+						console.log('no');
 						loading_bar(false);
-						jQuery('.header-search-results').html('<h3>Ничего не найдено</h3>');
+						jQuery('.header-search-results').html('<div class="informer-title">Сожалеем, но поиск не дал результатов...</div>');
 						jQuery('.header-search-all').addClass('hide');
 					} else {
+						console.log('yes');
 						jQuery('.header-search-container').scrollTop();
 						// append results to ul element
 						jQuery('.header-search-results').html(data);
@@ -52,6 +57,7 @@ jQuery(document).ready(function ($) {
 					}
 				},
 				error  : function () {
+					console.log('error');
 					loading_bar(false);
 					jQuery('.header-search-all').addClass('hide');
 				}

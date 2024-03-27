@@ -1,7 +1,9 @@
 </div> <!--  end #wrapperpub 2 -->
+ 
 
+ <?php 
 
-
+ ?>
 
     <div id="footer" class="footer">
         <div id="wrapperfooter" class="container-head">

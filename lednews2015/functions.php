@@ -5,6 +5,47 @@ require_once __DIR__ . '/deco-framework/load.php';
 
 
 
+// map catogory status 
+function led_map_category_status() {
+	$target_category = 'map';
+	$change_status_from = 'publish';
+	$change_status_to = 'pending';
+	$update_query = new WP_Query(array('post_status'=>$change_status_from, 'category_name'=>$target_category, 'posts_per_page'=>-1));
+
+	if($update_query->have_posts()){
+	    while($update_query->have_posts()){
+	    	if ( ! wp_is_post_revision( $post->ID ) ){
+
+	    		remove_action('acf/save_post', 'led_map_category_status');
+
+		        $update_query->the_post();
+		        wp_update_post(array('ID'=>$post->ID, 'post_status'=>$change_status_to));
+
+		        add_action('acf/save_post', 'led_map_category_status');
+		        
+		     }
+	    }
+	}
+
+}//end map
+
+//add_action('acf/save_post', 'led_map_category_status', 20);
+
+
+// Highlight WordPress Search Terms with jQuery
+function hls_set_query() {
+  $query  = attribute_escape(get_search_query());
+ 
+  if(strlen($query) > 0){
+    echo '
+      <script type="text/javascript">
+        var hls_query  = "'.$query.'";
+      </script>
+    ';
+  }
+}
+add_action('wp_print_scripts', 'hls_set_query');
+
 //Page Slug Body Class
 function add_slug_body_class( $classes ) {
 	global $post;
@@ -16,15 +57,102 @@ function add_slug_body_class( $classes ) {
 add_filter( 'body_class', 'add_slug_body_class' );
 
 
+function get_map_post() {
+	    $argsss = array(
+        //'post__in'     => $map_post,
+        //'post__not_in' => $map_post,
+        'category_name'    => 'map',
+        'posts_per_page' => 1,
+        'post_status'   => 'publish',
+        'category'    => '36',
+        'order'               => 'DESC',
+        'orderby'             => 'date',
+        //'orderby' => 'rand',
+        //'ignore_sticky_posts' => false
+        'fields' => 'ids'
+    );
+
+	$map_query = new WP_Query( $argsss );
+	wp_reset_query();
+	$map_last = $map_query->posts;
+
+	    $argsss2 = array(
+	        //'post__in'     => $map_post,
+	        'post__not_in' => $map_last,
+	        'category_name'    => 'map',
+	        'posts_per_page' => 1,
+	        'post_status'   => 'publish',
+	        'category'    => '36',
+	        'order'               => 'DESC',
+	        //'orderby'             => 'date',
+	        'orderby' => 'rand',
+	        //'ignore_sticky_posts' => false
+	        'fields' => 'ids'
+	    );
+
+	$map_query2 = new WP_Query( $argsss2 );
+	wp_reset_query();
+	$map_rand = $map_query2->posts;
+	$map_def = array_merge($map_rand, $map_last);
+	
+	return $map_def;
+}
+
 function wpse120407_pre_get_posts( $query ) {
 
     if ( is_home() && $query->is_main_query() ) {
 
-        $query->set( 'category__not_in', array( 36 ) );
-        //$map_post = get_field('led-blockmap-fix', 'option' , false);
+
+		$map_post = get_field('led-blockmap-fix', 'option' , false);
+
+		if ($map_post) {
+		    $argsss = array(
+		        //'post__in'     => $map_post,
+		        'post__not_in' => $map_post,
+		        'posts_per_page' => -1,
+		        'post_status'   => 'publish',
+		        'category_name'    => 'map',
+		        'order'               => 'DESC',
+		        'orderby'             => 'date',
+		        //'ignore_sticky_posts' => false
+		        'fields' => 'ids'
+		    );
+
+			$map_query = new WP_Query( $argsss );
+			$map_ids = $map_query->posts;
+			wp_reset_query();
+
+			$query->set( 'post__not_in' , $map_ids );
+
+		} else {
+		    $argsss2 = array(
+		        //'post__in'     => $map_post,
+		        'post__not_in' => get_map_post(),
+		        'posts_per_page' => -1,
+		        'post_status'   => 'publish',
+		        'category_name'    => 'map',
+		        'order'               => 'DESC',
+		        'orderby'             => 'date',
+		        //'ignore_sticky_posts' => false
+		        'fields' => 'ids'
+		    );
+
+			$map_query2 = new WP_Query( $argsss2 );
+			$map_ids_last = $map_query2->posts;
+			wp_reset_query();
+
+			$query->set( 'post__not_in' , $map_ids_last );
+
+
+		}
+
+        //$query->set( 'category__not_in', array( 36 ) );
+        // $query->set( 'post__not_in' , $map_ids );
+
+
     }
 }
-//add_action( 'pre_get_posts', 'wpse120407_pre_get_posts' );
+add_action( 'pre_get_posts', 'wpse120407_pre_get_posts' );
 
 
 
@@ -203,7 +331,7 @@ function deco_get_post_counts( $post_id = 0 ) {
 		wp_enqueue_style( 'bootstrap-colorpicke-css', get_template_directory_uri() . '/js/colpick.css' );
 		wp_enqueue_script( 'bootstrap-colorpicker', get_template_directory_uri() .'/js/colpick.js');
 
-		//wp_enqueue_script( 'postscribe', get_template_directory_uri() .'/js/postscribe.min.js');
+		wp_enqueue_script( 'highlight', get_template_directory_uri() .'/js/jquery.highlight.js');
 
 		
 

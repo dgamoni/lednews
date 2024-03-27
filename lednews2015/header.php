@@ -15,7 +15,12 @@
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100&subset=latin,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="http://vk.com/js/api/share.js?91" charset="windows-1251"></script>
+
+
 	<?php wp_head() ?>
+
+ 
+
 </head>
 <body <?php body_class(); ?> >
 

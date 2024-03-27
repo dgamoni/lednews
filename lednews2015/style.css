@@ -387,6 +387,10 @@ text-align: center;
   cursor: pointer;
 }
 /*only for seach*/
+.highlight {
+  color: #263ce3;
+}
+
 .header-search-container .post-meta {
 /*  visibility:visible;
   opacity:1;*/
@@ -415,6 +419,14 @@ text-align: center;
 }*/
 
 /*search*/
+.search-results .main-title {
+  font-weight: normal;
+}
+.led-search-title .header-search-icon, .led-search-title span{
+    font-size: 50px;
+    line-height: 50px;
+    vertical-align: baseline;
+}
 .header-search-results .one-third{
   float: left;
   display: inline;
@@ -2075,6 +2087,10 @@ fieldset {
 [placeholder]:focus::-webkit-input-placeholder {
   color: #ddd;
 }
+.header-search-input::-webkit-input-placeholder { /* WebKit browsers */
+    direction: ltr;
+    vertical-align: top;
+}
 
 
 input[type="text"],input[type="email"], input[type="number"],input[type="tel"],input[type="date"],input[type="url"], select,
@@ -2475,6 +2491,11 @@ body.logged-in .fixed{top: 32px;}
   }
 }
 @media only screen and (max-width: 887px) {
+  /*search*/
+  .led-search-title .header-search-icon, .led-search-title span{
+      font-size: 38px;
+  }
+
   .page-about .container .about-content .one-third.column {
       width: 100%;
   }
