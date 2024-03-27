@@ -85,7 +85,9 @@
 <!-- end wrapper 1 -->
 
 <!-- gallery -->
-<?php get_template_part('led-gallery');  ?>
+<?php //get_template_part('led-gallery');  ?>
+<!-- gallery from forum-->
+<?php get_template_part('led-gallery-forum');  ?>
 
 <!--  #wrapperpub 2 нижний блок-->
 <div id="wrapper" class="container wrapper-down">
